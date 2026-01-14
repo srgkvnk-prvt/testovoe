@@ -1,0 +1,56 @@
+header i.fa-brands.fa-telegram,
+header i.fa-brands.fa-whatsapp {
+    font-size: 32px;
+}
+
+.social-networks li i {
+    color: var(--color-blue) !important;
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -8px;
+}
+
+#mobileMenu {
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 1rem 0;
+}
+
+span.navbar-toggler-icon {
+    background: var(--color-blue);
+}
+
+
+button#burgerBtn {
+    outline: none;
+}
