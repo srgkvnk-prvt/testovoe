@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Inform Systems Group — технологии для платежей, киосков и безопасности</title>
+    <meta name="description"
+        content="Платёжные системы, встраиваемая ОС, биометрия и киосковое ПО для банков, ритейла и государства.">
+    <script src="js/theme-init.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <svg class="sprite" aria-hidden="true">
+        <defs>
+            <symbol id="logo-mark" viewBox="0 0 40 40">
+                <g clip-path="url(#clip0_2137_302)">
+                    <path
+                        d="M13.5562 14.3266C13.5562 14.5322 13.5224 14.73 13.46 14.9144L17.9502 19.4472C18.0816 19.5818 18.258 19.6556 18.4464 19.6556C18.5374 19.6556 18.6262 19.6384 18.7118 19.6038C18.9744 19.4964 19.1444 19.243 19.1444 18.959V17.2336C19.1438 16.2942 19.1438 15.2494 19.1444 14.1596C18.511 13.869 18.071 13.229 18.071 12.486C18.071 11.7424 18.5114 11.1022 19.1464 10.8124V4.10645L18.2084 4.94365C16.9652 6.04884 15.9118 7.10165 14.9884 8.16085C14.065 9.21885 13.281 10.273 12.591 11.3834C12.3622 11.7516 12.1458 12.1264 11.9448 12.5004C12.853 12.6124 13.5562 13.3872 13.5562 14.3266Z"
+                        fill="#0166FF" />
+                    <path
+                        d="M19.1392 35.8938L19.1558 30.7308C19.179 30.0674 18.9602 29.5368 18.4658 29.061L10.942 21.53C10.7808 21.577 10.6104 21.6016 10.4346 21.6016C10.304 21.6016 10.1758 21.5876 10.0532 21.5618L10.1534 22.1866C10.381 23.5996 10.8306 25.0224 11.49 26.4148C12.5274 28.6058 13.9616 30.6398 15.9372 32.7054L15.9478 32.716L15.9484 32.7166L19.1392 35.8938Z"
+                        fill="#0166FF" />
+                    <path
+                        d="M27.637 17.8736C27.6086 17.745 27.5932 17.6116 27.5932 17.4742C27.5932 16.503 28.3454 15.7076 29.2988 15.6394C29.1284 15.0834 28.9226 14.5236 28.6832 13.969C28.378 14.1938 28.0012 14.3266 27.5934 14.3266C27.338 14.3266 27.0946 14.2748 26.8736 14.1806L24.5286 16.5216L24.518 16.5328C23.6178 17.431 21.182 19.8676 21.166 19.8822C21.0432 19.9936 20.7878 20.2252 20.7858 20.6138L20.7832 22.984C20.7832 23.26 20.9464 23.51 21.2004 23.6222C21.2886 23.6606 21.3848 23.6806 21.479 23.6806C21.6548 23.6806 21.8232 23.615 21.9534 23.4956L27.637 17.8736Z"
+                        fill="#0166FF" />
+                    <path
+                        d="M19.144 25.6933C19.146 25.9745 18.9788 26.2279 18.7182 26.3381C18.6314 26.3745 18.5398 26.3931 18.4462 26.3931C18.2624 26.3931 18.0892 26.3221 17.9586 26.1927L12.1522 20.4227C12.2318 20.2177 12.2756 19.9949 12.2756 19.7613C12.2756 18.7443 11.4516 17.9205 10.4348 17.9205C10.3234 17.9205 10.2146 17.9305 10.1084 17.9497C10.2086 17.2247 10.3672 16.4943 10.5808 15.7739C10.8938 16.0207 11.288 16.1667 11.7164 16.1667C11.9082 16.1667 12.0932 16.1375 12.267 16.0825L17.304 21.1387C17.7996 21.6329 18.222 22.0509 18.6334 22.4549C19.0042 22.8191 19.1688 23.2171 19.1522 23.7079L19.144 25.6933Z"
+                        fill="#39AC59" />
+                    <path
+                        d="M25.7961 12.8833C25.7675 12.7553 25.7529 12.6225 25.7529 12.4859C25.7529 11.7025 26.2425 11.0331 26.9323 10.7685C25.6307 8.80689 23.9677 6.95089 21.7163 4.94549L20.7769 4.10889V10.8619C21.3567 11.1711 21.7513 11.7827 21.7513 12.4859C21.7513 13.1897 21.3567 13.8013 20.7769 14.1105V16.3467C20.8027 16.6201 20.9793 16.8463 21.2399 16.9385C21.3161 16.9651 21.3945 16.9783 21.4727 16.9783C21.6611 16.9783 21.8375 16.9033 21.9703 16.7667L25.7961 12.8833Z"
+                        fill="#39AC59" />
+                    <path
+                        d="M20.7766 35.8938L20.7701 27.7126C20.7675 27.2496 20.9267 26.8662 21.2583 26.5404C21.7465 26.0588 22.2619 25.548 22.8331 24.9776L28.6507 19.1406C28.8881 19.2528 29.1535 19.315 29.4335 19.315C29.6059 19.315 29.773 19.2912 29.9316 19.246C29.9536 19.7144 29.9522 20.194 29.927 20.6708V20.6714C29.864 21.8694 29.6605 23.017 29.3055 24.18C28.9533 25.3376 28.4611 26.4692 27.8023 27.6394C26.6095 29.7582 25.0002 31.7782 22.904 33.7854L20.7766 35.8938Z"
+                        fill="#39AC59" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_2137_302">
+                        <rect width="40" height="40" fill="white" />
+                    </clipPath>
+                </defs>
+            </symbol>
+            <symbol id="logo-full" viewBox="0 0 212 208">
+                <g clip-path="url(#clip0_2137_185)">
+                    <g clip-path="url(#clip1_2137_185)">
+                        <path
+                            d="M72.2184 47.385C72.2184 48.3381 72.0622 49.2551 71.7719 50.1101L92.5912 71.1256C93.1998 71.7503 94.0188 72.0907 94.8917 72.0907C95.3142 72.0907 95.7247 72.0106 96.1211 71.8504C97.3385 71.3519 98.1254 70.1765 98.1254 68.8611V60.8621C98.1233 56.5072 98.1233 51.6638 98.1254 46.6102C95.1881 45.2627 93.1498 42.2953 93.1498 38.8515C93.1498 35.4036 95.1921 32.4363 98.1354 31.0928V0L93.7885 3.88234C88.024 9.00608 83.1406 13.8875 78.8598 18.799C74.579 23.7045 70.9429 28.592 67.7454 33.7398C66.6842 35.4477 65.681 37.1836 64.75 38.9196C68.9587 39.4381 72.2184 43.0302 72.2184 47.385Z"
+                            fill="white" />
+                        <path
+                            d="M98.1032 147.377L98.1793 123.44C98.2874 120.365 97.2722 117.904 94.9797 115.699L60.0986 80.7822C59.3518 81.0005 58.5609 81.1146 57.746 81.1146C57.1393 81.1146 56.5467 81.0505 55.978 80.9304L56.4425 83.8276C57.4977 90.379 59.5821 96.9764 62.6395 103.432C67.4489 113.591 74.0983 123.019 83.2586 132.596L83.3086 132.646L83.3106 132.65L98.1032 147.377Z"
+                            fill="white" />
+                        <path
+                            d="M137.501 63.8294C137.369 63.2327 137.299 62.614 137.299 61.9773C137.299 57.4742 140.787 53.7861 145.206 53.4698C144.415 50.8929 143.462 48.296 142.353 45.7251C140.937 46.7683 139.191 47.383 137.299 47.383C136.116 47.383 134.986 47.1427 133.961 46.7062L123.089 57.5603L123.039 57.6124C118.866 61.7771 107.572 73.0737 107.498 73.1418C106.929 73.6584 105.744 74.7316 105.736 76.5336L105.724 87.5219C105.724 88.8013 106.48 89.9606 107.658 90.4812C108.066 90.6594 108.513 90.7515 108.949 90.7515C109.764 90.7515 110.545 90.4471 111.148 89.8925L137.501 63.8294Z"
+                            fill="white" />
+                        <path
+                            d="M98.1253 100.084C98.1353 101.388 97.3605 102.563 96.1511 103.073C95.7486 103.244 95.3242 103.328 94.8897 103.328C94.0387 103.328 93.2358 102.999 92.6292 102.399L65.709 75.6488C66.0774 74.6977 66.2817 73.6646 66.2817 72.5834C66.2817 67.8681 62.4614 64.0478 57.7461 64.0478C57.2295 64.0478 56.725 64.0939 56.2324 64.184C56.6969 60.8222 57.4318 57.4364 58.4229 54.0967C59.8745 55.24 61.7005 55.9167 63.6888 55.9167C64.5778 55.9167 65.4367 55.7806 66.2416 55.5263L89.5938 78.9685C91.8903 81.2591 93.8505 83.1973 95.7567 85.0713C97.4766 86.7592 98.2394 88.6053 98.1613 90.8818L98.1253 100.084Z"
+                            fill="white" />
+                        <path
+                            d="M128.966 40.6917C128.834 40.0991 128.766 39.4824 128.766 38.8497C128.766 35.2176 131.036 32.1141 134.234 30.8868C128.199 21.7926 120.488 13.187 110.051 3.89055L105.696 0.012207V31.3212C108.383 32.7549 110.213 35.59 110.213 38.8497C110.213 42.1133 108.383 44.9485 105.696 46.3821V56.7497C105.816 58.0171 106.633 59.0663 107.842 59.4928C108.197 59.6149 108.559 59.677 108.921 59.677C109.794 59.677 110.613 59.3286 111.228 58.6959L128.966 40.6917Z"
+                            fill="white" />
+                        <path
+                            d="M105.694 147.377L105.664 109.447C105.652 107.3 106.389 105.522 107.928 104.012C110.193 101.78 112.581 99.4114 115.23 96.7664L142.203 69.7041C143.304 70.2247 144.533 70.513 145.833 70.513C146.632 70.513 147.406 70.4029 148.143 70.1926C148.245 72.3631 148.239 74.5876 148.121 76.798V76.802C147.829 82.3563 146.884 87.6762 145.24 93.0683C143.606 98.4343 141.326 103.682 138.27 109.106C132.74 118.929 125.28 128.294 115.561 137.602L105.694 147.377Z"
+                            fill="white" />
+                        <path d="M4.41235 181.541H0.00341797V206.887H4.41235V181.541Z" fill="white" />
+                        <path
+                            d="M36.0016 192.009H12.6755V185.948H41.694V181.539H15.1563C11.346 181.539 8.26855 184.615 8.26855 188.427V189.528C8.26855 193.338 11.344 196.416 15.1563 196.416H38.4824V202.476H9.46189V206.885H36.0016C39.8119 206.885 42.8893 203.81 42.8893 199.998V198.896C42.8893 195.086 39.8119 192.009 36.0016 192.009Z"
+                            fill="white" />
+                        <path
+                            d="M80.173 185.948V181.539H53.6333C49.8231 181.539 46.7456 184.615 46.7456 188.427V199.998C46.7456 203.808 49.821 206.885 53.6333 206.885H73.2853C77.0956 206.885 80.173 203.81 80.173 199.998V192.009H62.8616V196.418H75.7641V202.478H51.1525V185.948H80.173Z"
+                            fill="white" />
+                        <path d="M89.7239 201.377H85.3149V206.888H89.7239V201.377Z" fill="white" />
+                        <path
+                            d="M121.405 181.541H94.8638V206.887H121.403C125.214 206.887 128.291 203.812 128.291 200V188.429C128.291 184.616 125.216 181.541 121.405 181.541ZM123.884 202.478H99.2727V185.948H123.884V202.478Z"
+                            fill="white" />
+                        <path
+                            d="M133.433 188.429V200C133.433 203.81 136.508 206.887 140.32 206.887H166.86V202.478H137.842V196.418H166.86V192.009H137.842V185.948H166.86V181.539H140.32C136.51 181.541 133.433 184.617 133.433 188.429Z"
+                            fill="white" />
+                        <path
+                            d="M206.441 181.541L190.737 203.902L174.987 181.541H169.431L186.008 204.729C187.063 206.199 188.763 207.3 190.691 207.3C192.665 207.3 194.319 206.199 195.374 204.729L211.997 181.541H206.441Z"
+                            fill="white" />
+                    </g>
+                </g>
+                <defs>
+                    <clipPath id="clip0_2137_185">
+                        <rect width="212" height="207.3" fill="white" />
+                    </clipPath>
+                    <clipPath id="clip1_2137_185">
+                        <rect width="211.993" height="207.3" fill="white" transform="translate(0.00341797)" />
+                    </clipPath>
+                </defs>
+            </symbol>
+            <symbol id="icon-arrow" viewBox="0 0 16 16">
+                <path fill="none" stroke="currentColor" stroke-width="1.8" d="M2 8h11M9 4l4 4-4 4" />
+            </symbol>
+            <symbol id="icon-chevron" viewBox="0 0 16 16">
+                <path fill="none" stroke="currentColor" stroke-width="1.6" d="m6 3 5 5-5 5" />
+            </symbol>
+            <symbol id="icon-check" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-width="2" d="m4 12.5 5 5L20 6.5" />
+            </symbol>
+            <symbol id="icon-image" viewBox="0 0 48 48">
+                <g fill="none" stroke="currentColor" stroke-width="1.6">
+                    <rect x="6" y="9" width="36" height="30" rx="4" />
+                    <circle cx="17" cy="20" r="3.5" />
+                    <path d="m6 34 11-10 8 7 6-5 11 9" />
+                </g>
+            </symbol>
+            <symbol id="icon-moon" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-width="1.7"
+                    d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" />
+            </symbol>
+            <symbol id="icon-sun" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.7">
+                    <circle cx="12" cy="12" r="4" />
+                    <path
+                        d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                </g>
+            </symbol>
+            <symbol id="icon-burger" viewBox="0 0 20 20">
+                <path fill="none" stroke="currentColor" stroke-width="1.8" d="M2 5h16M2 10h16M2 15h16" />
+            </symbol>
+            <symbol id="icon-box" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                    <path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z" />
+                    <path d="M3 7.5 12 12l9-4.5M12 12v9" />
+                </g>
+            </symbol>
+            <symbol id="icon-shield" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                    <path d="M12 3 4 6v6c0 4.5 3.2 8 8 9 4.8-1 8-4.5 8-9V6z" />
+                    <path d="m8.5 12 2.5 2.5 4.5-5" />
+                </g>
+            </symbol>
+            <symbol id="icon-layers" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                    <path d="m12 3 9 4.5-9 4.5L3 7.5z" />
+                    <path d="m3 12 9 4.5 9-4.5M3 16.5 12 21l9-4.5" />
+                </g>
+            </symbol>
+            <symbol id="icon-headset" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                    <path d="M4 14v-2a8 8 0 0 1 16 0v2" />
+                    <rect x="3" y="14" width="4" height="6" rx="1.5" />
+                    <rect x="17" y="14" width="4" height="6" rx="1.5" />
+                    <path d="M19 20c0 1.5-2 2-5 2" />
+                </g>
+            </symbol>
+            <symbol id="icon-telegram" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M21.5 4.4 2.9 11.6c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.5-1.9-1.4-1.3zM8.6 13.7l9.7-6.1c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.3z" />
+            </symbol>
+            <symbol id="icon-vk" viewBox="0 0 24 24">
+                <text x="12" y="16" text-anchor="middle" font-size="11" font-weight="700" font-family="Inter,Arial"
+                    fill="currentColor">VK</text>
+            </symbol>
+            <symbol id="icon-youtube" viewBox="0 0 24 24">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M22 8.2a2.6 2.6 0 0 0-1.8-1.9C18.6 5.9 12 5.9 12 5.9s-6.6 0-8.2.4A2.6 2.6 0 0 0 2 8.2 27 27 0 0 0 1.6 12 27 27 0 0 0 2 15.8a2.6 2.6 0 0 0 1.8 1.9c1.6.4 8.2.4 8.2.4s6.6 0 8.2-.4a2.6 2.6 0 0 0 1.8-1.9c.3-1.3.4-2.5.4-3.8s-.1-2.5-.4-3.8zM10 15V9l5.2 3z" />
+            </symbol>
+            <symbol id="icon-linkedin" viewBox="0 0 24 24">
+                <text x="12" y="16" text-anchor="middle" font-size="11" font-weight="700" font-family="Inter,Arial"
+                    fill="currentColor">in</text>
+            </symbol>
+            <symbol id="icon-github" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z" />
+            </symbol>
+            <symbol id="icon-mail" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-width="1.6"
+                    d="M3.5 6.5h17v11h-17zM3.5 7.5 12 14l8.5-6.5" />
+            </symbol>
+        </defs>
+    </svg>
+    <header class="tmpl header">
+        <div class="container header__inner">
+            <div class="logo">
+                <a href="#">
+                    <img src="assets/logo-small.svg" alt="isg.dev">
+                </a>
+            </div>
+
+            <div class="header-menu">
+                <nav aria-label="Основное меню" class="open-menu">
+                    <button class="hamburger" type="button" aria-label="Открыть меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="menu-level-1">
+                        <li class="menu-item has-submenu">
+                            <a href="#products" aria-haspopup="true">Продукты</a>
+                            <div class="sub-block">
+                                <div class="sub-block-content container">
+                                    <div class="sub-block-body">
+                                        <ul class="submenu menu-grid menu-level-2">
+                                            <li class="menu-item has-submenu header-menu-show-block">
+                                                <a href="#products-development" class="icon-text">
+                                                    <span class="icon-text-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path
+                                                                d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2" />
+                                                            <rect x="14" y="2" width="8" height="8" rx="1" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="icon-text-text">Разработки</span>
+                                                </a>
+                                                <ul class="submenu menu-level-3">
+                                                    <li><a href="#allvend">ПО для киосков ALLVEND</a></li>
+                                                    <li><a href="#fastsys">Операционная система FastSYS</a></li>
+                                                    <li><a href="#skysend">Процессинговая система SkySend</a></li>
+                                                    <li><a href="#finger">Биометрическая система FINGER</a></li>
+                                                    <li><a href="#ad-platform">Облачная рекламная платформа</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item has-submenu header-menu-show-block">
+                                                <a href="#devices" class="icon-text">
+                                                    <span class="icon-text-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M10 16h.01" />
+                                                            <path
+                                                                d="M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+                                                            <path d="M21.946 12.013H2.054" />
+                                                            <path d="M6 16h.01" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="icon-text-text">Устройства</span>
+                                                </a>
+                                                <ul class="submenu menu-level-3">
+                                                    <li><a href="#beauty-kiosks">Киоски самообслуживания Beauty</a></li>
+                                                    <li><a href="#allvend-blocks">Универсальные блоки ALLVEND</a></li>
+                                                    <li><a href="#finger-blocks">Биометрические блоки FINGER</a></li>
+                                                    <li><a href="#fiscal-server">Единый фискальный сервер</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item has-submenu header-menu-show-block">
+                                                <a href="#innovations" class="icon-text">
+                                                    <span class="icon-text-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path
+                                                                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                                                            <path d="M9 18h6" />
+                                                            <path d="M10 22h4" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="icon-text-text">Инновации</span>
+                                                </a>
+                                                <ul class="submenu menu-level-3">
+                                                    <li><a href="#smart-city">Единая информационная система «Умный
+                                                            город»</a></li>
+                                                    <li><a href="#neuron">Сеть технопарков «Нейрон»</a></li>
+                                                    <li><a href="#my-doctor">Система телемедицины «Мой доктор»</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item has-submenu header-menu-show-block">
+                                                <a href="#technologies" class="icon-text">
+                                                    <span class="icon-text-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M12 20v2" />
+                                                            <path d="M12 2v2" />
+                                                            <path d="M17 20v2" />
+                                                            <path d="M17 2v2" />
+                                                            <path d="M2 12h2" />
+                                                            <path d="M2 17h2" />
+                                                            <path d="M2 7h2" />
+                                                            <path d="M20 12h2" />
+                                                            <path d="M20 17h2" />
+                                                            <path d="M20 7h2" />
+                                                            <path d="M7 20v2" />
+                                                            <path d="M7 2v2" />
+                                                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                                                            <rect x="8" y="8" width="8" height="8" rx="1" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="icon-text-text">Технологии</span>
+                                                </a>
+                                                <ul class="submenu menu-level-3">
+                                                    <li><a href="#binary-updates">Система удаленных бинарных
+                                                            обновлений</a></li>
+                                                    <li><a href="#bsd-cloning">Технология клонирования *BSD серверов</a>
+                                                    </li>
+                                                    <li><a href="#key-exchange">Замкнутая система обмена
+                                                            криптоключами</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-item has-submenu">
+                            <a href="#services" aria-haspopup="true">Услуги</a>
+                            <div class="sub-block">
+                                <div class="sub-block-content container">
+                                    <div class="sub-block-body">
+                                        <ul class="submenu menu-grid menu-level-2">
+                                            <li class="menu-item has-submenu header-menu-show-block">
+                                                <a href="#products-development" class="icon-text">
+                                                    <span class="icon-text-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="m15 6 2 2 4-4" />
+                                                            <path
+                                                                d="M2 12h20A10 10 0 1 1 12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 4-10" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="icon-text-text">Услуги в области WEB3</span>
+                                                </a>
+                                                <ul class="submenu menu-level-3">
+                                                    <li><a href="#solflare-registration">Регистрация криптокарт
+                                                            Solflare</a></li>
+                                                    <li><a href="#device-security">Настройка безопасности устройств</a>
+                                                    </li>
+                                                    <li><a href="#passive-income">Настройка пассивного дохода</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item has-submenu header-menu-show-block">
+                                                <a href="#products-development" class="icon-text">
+                                                    <span class="icon-text-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path
+                                                                d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2" />
+                                                            <path
+                                                                d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06" />
+                                                            <path
+                                                                d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="icon-text-text">Услуги системы SkySend</span>
+                                                </a>
+                                                <ul class="submenu menu-level-3">
+                                                    <li><a href="#payment-processing">Обработка платежных транзакций</a>
+                                                    </li>
+                                                    <li><a href="#custom-interfaces">Индивидуальные интерфейсы</a></li>
+                                                    <li><a href="#providers">Подключение поставщиков услуг</a></li>
+                                                    <li><a href="#financial-services">Финансовые услуги системы</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item has-submenu header-menu-show-block">
+                                                <a href="#products-development" class="icon-text">
+                                                    <span class="icon-text-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="m18 16 4-4-4-4" />
+                                                            <path d="m6 8-4 4 4 4" />
+                                                            <path d="m14.5 4-5 16" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="icon-text-text">Разработка и поддержка ПО</span>
+                                                </a>
+                                                <ul class="submenu menu-level-3">
+                                                    <li><a href="#cluster-systems">Кластерные и транзакционные
+                                                            системы</a></li>
+                                                    <li><a href="#embedded-software">Встраиваемое программное
+                                                            обеспечение</a></li>
+                                                    <li><a href="#drivers">Драйвера к периферийным устройствам</a></li>
+                                                    <li><a href="#transaction-api">Сервисы обработки транзакций
+                                                            (API)</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item has-submenu header-menu-show-block">
+                                                <a href="#products-development" class="icon-text">
+                                                    <span class="icon-text-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M2 6h4" />
+                                                            <path d="M2 10h4" />
+                                                            <path d="M2 14h4" />
+                                                            <path d="M2 18h4" />
+                                                            <rect width="16" height="20" x="4" y="2" rx="2" />
+                                                            <path d="M9.5 8h5" />
+                                                            <path d="M9.5 12H16" />
+                                                            <path d="M9.5 16H14" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="icon-text-text">Аналитическая работа</span>
+                                                </a>
+                                                <ul class="submenu menu-level-3">
+                                                    <li><a href="#it-audit">Проектирование и аудит ИТ систем</a></li>
+                                                    <li><a href="#technical-specifications">Разработка технических
+                                                            заданий</a></li>
+                                                    <li><a href="#regulations">Разработка инструкций и регламентов</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item has-submenu header-menu-show-block">
+                                                <a href="#products-development" class="icon-text">
+                                                    <span class="icon-text-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2" />
+                                                            <path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2" />
+                                                            <path
+                                                                d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3" />
+                                                            <path d="M4 22h16" />
+                                                            <path
+                                                                d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z" />
+                                                            <path
+                                                                d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3" />
+                                                        </svg>
+                                                    </span>
+                                                    <span class="icon-text-text">Внедрение решений</span>
+                                                </a>
+                                                <ul class="submenu menu-level-3">
+                                                    <li><a href="#crypto-servers">Криптозащищенные сервера</a></li>
+                                                    <li><a href="#secure-voip">Защищенная IP телефония</a></li>
+                                                    <li><a href="#secure-key-exchange">Замкнутая система обмена
+                                                            ключами</a></li>
+                                                    <li><a href="#video-surveillance">Интеллектуальное
+                                                            видеонаблюдение</a></li>
+                                                    <li><a href="#mfc-automation">Комплексная автоматизация МФЦ</a></li>
+                                                    <li><a href="#certification-center">Создание удостоверяющего
+                                                            центра</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-item has-submenu">
+                            <a href="#industries" aria-haspopup="true">Сферы</a>
+                            <div class="sub-block">
+                                <div class="sub-block-content container">
+                                    <div class="sub-block-body sub-block-body4text">
+                                        <div class="sub-cols-3">
+                                            <div class="col header-menu-show-block">
+                                                <ul class="submenu simple menu-level-2">
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <circle cx="12" cy="8" r="5" />
+                                                                    <path d="M20 21a8 8 0 0 0-16 0" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Физическим лицам</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path
+                                                                        d="M10 22H6a2 2 0 01-2-2V4a2 2 0 012-2h10a2 2 0 012 2v4" />
+                                                                    <path d="M11 18h.01" />
+                                                                    <path d="M22 22a4 4 0 00-8 0" />
+                                                                    <circle cx="18" cy="15" r="3" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Производители киосков</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="M10 18v-7" />
+                                                                    <path
+                                                                        d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z" />
+                                                                    <path d="M14 18v-7" />
+                                                                    <path d="M18 18v-7" />
+                                                                    <path d="M3 22h18" />
+                                                                    <path d="M6 18v-7" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Банки и финансы</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path
+                                                                        d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                                                    <path
+                                                                        d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Медицина и
+                                                                здравоохранение</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col header-menu-show-block">
+                                                <ul class="submenu simple menu-level-2">
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path
+                                                                        d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8" />
+                                                                    <path d="M7 14h.01" />
+                                                                    <path d="M17 14h.01" />
+                                                                    <rect width="18" height="8" x="3" y="10" rx="2" />
+                                                                    <path d="M5 18v2" />
+                                                                    <path d="M19 18v2" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Автопроизводители</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <rect x="16" y="16" width="6" height="6" rx="1" />
+                                                                    <rect x="2" y="16" width="6" height="6" rx="1" />
+                                                                    <rect x="9" y="2" width="6" height="6" rx="1" />
+                                                                    <path
+                                                                        d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+                                                                    <path d="M12 12V8" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Системные интеграторы</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                                                                    <path d="M7 2v20" />
+                                                                    <path
+                                                                        d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Быстрое питание</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="M10 12h4" />
+                                                                    <path d="M10 8h4" />
+                                                                    <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+                                                                    <path
+                                                                        d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" />
+                                                                    <path
+                                                                        d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Государственный сектор</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col header-menu-show-block">
+                                                <ul class="submenu simple menu-level-2">
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="M4.9 16.1C1 12.2 1 5.8 4.9 1.9" />
+                                                                    <path d="M7.8 4.7a6.14 6.14 0 0 0-.8 7.5" />
+                                                                    <circle cx="12" cy="9" r="2" />
+                                                                    <path d="M16.2 4.8c2 2 2.26 5.11.8 7.47" />
+                                                                    <path d="M19.1 1.9a9.96 9.96 0 0 1 0 14.1" />
+                                                                    <path d="M9.5 18h5" />
+                                                                    <path d="m8 22 4-11 4 11" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Операторы связи</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path
+                                                                        d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                                                    <path
+                                                                        d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                                                    <circle cx="18" cy="20" r="2" />
+                                                                    <circle cx="8" cy="20" r="2" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Торговые сети</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="M2 4v16" />
+                                                                    <path d="M2 8h18a2 2 0 0 1 2 2v10" />
+                                                                    <path d="M2 17h20" />
+                                                                    <path d="M6 8v9" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Гостиничный бизнес</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="M4 6 2 7" />
+                                                                    <path d="M10 6h4" />
+                                                                    <path d="m22 7-2-1" />
+                                                                    <rect width="16" height="16" x="4" y="3" rx="2" />
+                                                                    <path d="M4 11h16" />
+                                                                    <path d="M8 15h.01" />
+                                                                    <path d="M16 15h.01" />
+                                                                    <path d="M6 19v2" />
+                                                                    <path d="M18 21v-2" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Пассажирские перевозки</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="header-menu-show-block sub-block-text">
+                                            <div>
+                                                <div class="sub-block-text__title">Наши направления</div>
+                                                <div class="sub-block-text__desc">От разработки программного обеспечения
+                                                    до цифровой трансформации: создаём технологические решения для
+                                                    разных отраслей и помогаем бизнесу решать сложные задачи.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-item has-submenu">
+                            <a href="#company" aria-haspopup="true">Компания</a>
+                            <div class="sub-block">
+                                <div class="sub-block-content container">
+                                    <div class="sub-block-body sub-block-body4text">
+                                        <div class="sub-cols-3">
+                                            <div class="col header-menu-show-block">
+                                                <ul class="submenu simple menu-level-2">
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <circle cx="12" cy="12" r="10" />
+                                                                    <path
+                                                                        d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Миссия</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="M12 5v16" />
+                                                                    <path d="M16 13h2" />
+                                                                    <path d="M16 9h2" />
+                                                                    <path
+                                                                        d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" />
+                                                                    <path d="M6 13h2" />
+                                                                    <path d="M6 9h2" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">История</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col header-menu-show-block">
+                                                <ul class="submenu simple menu-level-2">
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path
+                                                                        d="M13 22h5a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.3" />
+                                                                    <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                                                                    <path
+                                                                        d="m7.69 16.479 1.29 4.88a.5.5 0 0 1-.698.591l-1.843-.849a1 1 0 0 0-.879.001l-1.846.85a.5.5 0 0 1-.692-.593l1.29-4.88" />
+                                                                    <circle cx="6" cy="14" r="3" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Лицензии</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+                                                                    <path
+                                                                        d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+                                                                    <path d="m21 3 1 11h-2" />
+                                                                    <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+                                                                    <path d="M3 4h8" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Партнерство</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col header-menu-show-block">
+                                                <ul class="submenu simple menu-level-2">
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="M12 12h.01" />
+                                                                    <path
+                                                                        d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                                                                    <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+                                                                    <rect width="20" height="14" x="2" y="6" rx="2" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Работа</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#products-development" class="icon-text">
+                                                            <span class="icon-text-icon"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                    height="20" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <path d="M16 2v2" />
+                                                                    <path d="M17.915 21a6 6 0 10-12 0" />
+                                                                    <path d="M8 2v2" />
+                                                                    <circle cx="12" cy="11" r="4" />
+                                                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                                                                </svg></span>
+                                                            <span class="icon-text-text">Контакты</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="header-menu-show-block sub-block-text">
+                                            <div>
+                                                <div class="sub-block-text__title">Узнайте, кто мы</div>
+                                                <div class="sub-block-text__desc">Мы — команда увлечённых экспертов,
+                                                    создающих инновационные ИТ-решения, которые помогают бизнесу расти и
+                                                    развиваться в цифровом мире.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="menu-item has-submenu">
+                            <a href="#support" aria-haspopup="true">Поддержка</a>
+                            <div class="sub-block">
+                                <div class="sub-block-content container">
+                                    <div class="sub-block-body sub-block-body4text">
+                                        <ul class="submenu simple menu-level-2 header-menu-show-block">
+                                            <li class="menu-item">
+                                                <a href="#" class="icon-text">
+                                                    <span class="icon-text-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round">
+                                                            <path d="M12 15V3" />
+                                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                                            <path d="m7 10 5 5 5-5" />
+                                                        </svg></span>
+                                                    <span class="icon-text-text">Загрузки</span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#" class="icon-text">
+                                                    <span class="icon-text-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round">
+                                                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                                                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                                                        </svg></span>
+                                                    <span class="icon-text-text">Обратная связь</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="header-menu-show-block sub-block-text">
+                                            <div>
+                                                <div class="sub-block-text__title">Наши контакты</div>
+                                                <div class="sub-block-text__desc">Свяжитесь с нашей командой, чтобы
+                                                    обсудить ваши задачи.</div>
+                                                <div class="sub-block-text__row">
+                                                    Телефон:&nbsp;<a href="tel:+73455555555">+7 (345) 555-55-55</a>
+                                                </div>
+                                                <div class="sub-block-text__row">
+                                                    Эл. почта:&nbsp;<a href="mailto:info@isg.dev">info@isg.dev</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__actions right-side">
+                <div class="search">
+                    <form>
+                        <input type="text" name="s" placeholder="Поиск">
+                    </form>
+                    <button type="button" class="icon-btn search__toggle" aria-label="Поиск">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.0938 15.1953L12.168 11.2891C12.6628 10.7031 13.0534 10.0326 13.3398 9.27734C13.6263 8.52214 13.7695 7.72786 13.7695 6.89453C13.7695 5.94401 13.5872 5.04557 13.2227 4.19922C12.8711 3.36589 12.3828 2.63997 11.7578 2.02148C11.1328 1.403 10.4036 0.911458 9.57031 0.546875C8.73698 0.182291 7.84505 0 6.89453 0C5.94401 0 5.04557 0.182291 4.19922 0.546875C3.36589 0.911458 2.63997 1.403 2.02148 2.02148C1.40299 2.63997 0.911458 3.36589 0.546875 4.19922C0.182292 5.04557 0 5.94401 0 6.89453C0 7.84505 0.182292 8.73698 0.546875 9.57031C0.911458 10.4036 1.40299 11.1328 2.02148 11.7578C2.63997 12.3828 3.36589 12.8711 4.19922 13.2227C5.04557 13.5872 5.94401 13.7695 6.89453 13.7695C7.72786 13.7695 8.52214 13.6263 9.27734 13.3398C10.0326 13.0534 10.7096 12.6628 11.3086 12.168H11.2891L15.1953 16.0938C15.2604 16.1458 15.3288 16.1882 15.4004 16.2207C15.472 16.2533 15.5534 16.2695 15.6445 16.2695C15.8138 16.2695 15.9603 16.2077 16.084 16.084C16.2077 15.9603 16.2695 15.8138 16.2695 15.6445C16.2695 15.5534 16.2533 15.472 16.2207 15.4004C16.1882 15.3288 16.1458 15.2604 16.0938 15.1953ZM1.26953 6.89453C1.26953 6.11328 1.41927 5.38411 1.71875 4.70703C2.00521 4.01693 2.40234 3.41797 2.91016 2.91016C3.41797 2.40234 4.01693 2.00521 4.70703 1.71875C5.38411 1.41927 6.11328 1.26953 6.89453 1.26953C7.67578 1.26953 8.40495 1.41927 9.08203 1.71875C9.77214 2.00521 10.3711 2.40234 10.8789 2.91016C11.3867 3.41797 11.7839 4.01693 12.0703 4.70703C12.3698 5.38411 12.5195 6.11328 12.5195 6.89453C12.5195 7.67578 12.3698 8.40495 12.0703 9.08203C11.7839 9.77214 11.3867 10.3711 10.8789 10.8789C10.3711 11.3867 9.77214 11.7839 9.08203 12.0703C8.40495 12.3698 7.67578 12.5195 6.89453 12.5195C6.11328 12.5195 5.38411 12.3698 4.70703 12.0703C4.02995 11.7839 3.43424 11.3835 2.91992 10.8691C2.4056 10.3548 2.00521 9.75911 1.71875 9.08203C1.41927 8.40495 1.26953 7.67578 1.26953 6.89453Z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <a href="#" class="icon-btn" aria-label="Telegram">
+                    <svg width="18" height="16" viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor">
+                        <path
+                            d="M17.2656 0.175781C17.2005 0.123698 17.1289 0.0813799 17.0508 0.0488281C16.9727 0.0162764 16.888 0 16.7969 0C16.7448 0 16.6992 0.00325489 16.6602 0.00976562C16.6211 0.0162764 16.582 0.0325518 16.543 0.0585938V0.0390625L0.703125 6.25C0.494792 6.32812 0.325521 6.46159 0.195312 6.65039C0.0651042 6.83919 0 7.05078 0 7.28516C0 7.54557 0.0846354 7.77995 0.253906 7.98828C0.423177 8.19661 0.638021 8.32031 0.898438 8.35938V8.37891L5 9.17969V13.75C5 14.0104 5.07161 14.2448 5.21484 14.4531C5.35807 14.6615 5.54688 14.8112 5.78125 14.9023C5.84635 14.9414 5.92122 14.9674 6.00586 14.9805C6.09049 14.9935 6.17188 15 6.25 15C6.43229 15 6.59831 14.9642 6.74805 14.8926C6.89779 14.821 7.03125 14.7266 7.14844 14.6094L9.12109 12.5586L12.2656 15.3125C12.3698 15.4036 12.4935 15.4785 12.6367 15.5371C12.7799 15.5957 12.9297 15.625 13.0859 15.625C13.151 15.625 13.2194 15.6185 13.291 15.6055C13.3626 15.5924 13.431 15.5794 13.4961 15.5664H13.4766C13.6849 15.5013 13.8639 15.3874 14.0137 15.2246C14.1634 15.0618 14.2643 14.8763 14.3164 14.668V14.6484L17.4805 0.859375C17.4935 0.833333 17.5 0.807292 17.5 0.78125C17.5 0.755208 17.5 0.729167 17.5 0.703125C17.5 0.598958 17.4772 0.501302 17.4316 0.410156C17.3861 0.319011 17.3307 0.240886 17.2656 0.175781ZM12.4805 2.98828L5.48828 7.98828L1.60156 7.22656L12.4805 2.98828ZM6.25 13.75V10.0391L8.18359 11.7383L6.25 13.75ZM13.0859 14.375L6.62109 8.71094L15.918 2.05078L13.0859 14.375Z" />
+                    </svg>
+                </a>
+
+                <button type="button" class="icon-btn icon-btn--theme" data-theme-toggle aria-label="Сменить тему">
+                    <svg class="icon-btn__icon icon-btn__icon--moon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                    </svg>
+                    <svg class="icon-btn__icon icon-btn__icon--sun" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="4" />
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                    </svg>
+                </button>
+
+                <div class="header-languages">
+                    <button type="button" class="icon-text header-languages-current">
+                        <span class="icon-text-icon">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.125 0C7.00521 0 5.95052 0.214844 4.96094 0.644531C3.97135 1.0612 3.10872 1.63737 2.37305 2.37305C1.63737 3.10872 1.0612 3.97135 0.644531 4.96094C0.214844 5.95052 0 7.00521 0 8.125C0 9.24479 0.214844 10.2995 0.644531 11.2891C1.0612 12.2786 1.63737 13.1413 2.37305 13.877C3.10872 14.6126 3.97135 15.1888 4.96094 15.6055C5.95052 16.0352 7.00521 16.25 8.125 16.25C9.24479 16.25 10.2995 16.0352 11.2891 15.6055C12.2786 15.1888 13.1413 14.6126 13.877 13.877C14.6126 13.1413 15.1888 12.2786 15.6055 11.2891C16.0352 10.2995 16.25 9.24479 16.25 8.125C16.25 7.00521 16.0352 5.95052 15.6055 4.96094C15.1758 3.97135 14.5964 3.11198 13.8672 2.38281C13.138 1.65365 12.2786 1.07422 11.2891 0.644531C10.2995 0.214844 9.24479 0 8.125 0ZM15 8.125C15 8.46354 14.9772 8.79232 14.9316 9.11133C14.8861 9.43034 14.8177 9.73958 14.7266 10.0391L14.7461 10H11.7383C11.7773 9.71354 11.8099 9.41081 11.8359 9.0918C11.862 8.77279 11.875 8.45052 11.875 8.125C11.875 7.79948 11.862 7.47396 11.8359 7.14844C11.8099 6.82292 11.7708 6.4974 11.7188 6.17188L11.7383 6.25H14.7461C14.8242 6.53646 14.8861 6.83594 14.9316 7.14844C14.9772 7.46094 15 7.78646 15 8.125ZM6.09375 11.25H10.1562C9.94792 11.9401 9.67122 12.5781 9.32617 13.1641C8.98112 13.75 8.58073 14.2839 8.125 14.7656C7.66927 14.2839 7.27214 13.75 6.93359 13.1641C6.59505 12.5781 6.32161 11.9596 6.11328 11.3086L6.09375 11.25ZM5.78125 10C5.72917 9.71354 5.6901 9.41081 5.66406 9.0918C5.63802 8.77279 5.625 8.45052 5.625 8.125C5.625 7.79948 5.64128 7.47396 5.67383 7.14844C5.70638 6.82292 5.7487 6.50391 5.80078 6.19141L5.78125 6.25H10.4688C10.5208 6.53646 10.5599 6.83919 10.5859 7.1582C10.612 7.47721 10.625 7.79948 10.625 8.125C10.625 8.45052 10.612 8.77604 10.5859 9.10156C10.5599 9.42708 10.5143 9.74609 10.4492 10.0586L10.4688 10H5.78125ZM1.25 8.125C1.25 7.78646 1.27279 7.45768 1.31836 7.13867C1.36393 6.81966 1.43229 6.51042 1.52344 6.21094L1.50391 6.25H4.51172C4.47266 6.53646 4.4401 6.83919 4.41406 7.1582C4.38802 7.47721 4.375 7.79948 4.375 8.125C4.375 8.45052 4.38802 8.77604 4.41406 9.10156C4.4401 9.42708 4.47917 9.7526 4.53125 10.0781L4.51172 10H1.50391C1.42578 9.71354 1.36393 9.41406 1.31836 9.10156C1.27279 8.78906 1.25 8.46354 1.25 8.125ZM10.1562 5H6.09375C6.30208 4.3099 6.57878 3.67188 6.92383 3.08594C7.26888 2.5 7.66927 1.96615 8.125 1.48438C8.58073 1.96615 8.97786 2.5 9.31641 3.08594C9.65495 3.67188 9.92839 4.29036 10.1367 4.94141L10.1562 5ZM14.2383 5H11.4648C11.2695 4.32292 11.0254 3.6849 10.7324 3.08594C10.4395 2.48698 10.0977 1.92708 9.70703 1.40625L9.72656 1.44531C10.7161 1.67969 11.6016 2.10612 12.3828 2.72461C13.1641 3.3431 13.7826 4.08854 14.2383 4.96094V5ZM6.52344 1.44531C6.14583 1.9401 5.81055 2.48372 5.51758 3.07617C5.22461 3.66862 4.98698 4.28385 4.80469 4.92188L4.78516 5H2.01172C2.46745 4.11458 3.08268 3.36263 3.85742 2.74414C4.63216 2.12565 5.50781 1.69271 6.48438 1.44531H6.52344ZM2.01172 11.25H4.78516C4.98047 11.9271 5.22461 12.5651 5.51758 13.1641C5.81055 13.763 6.15234 14.3229 6.54297 14.8438L6.52344 14.8047C5.53385 14.5703 4.64844 14.1439 3.86719 13.5254C3.08594 12.9069 2.46745 12.1615 2.01172 11.2891V11.25ZM9.72656 14.8047C10.1042 14.3099 10.4395 13.7663 10.7324 13.1738C11.0254 12.5814 11.263 11.9661 11.4453 11.3281L11.4648 11.25H14.2383C13.7826 12.1354 13.1673 12.8874 12.3926 13.5059C11.6178 14.1243 10.7422 14.5573 9.76562 14.8047H9.72656Z" />
+                            </svg>
+                        </span>
+                        <span class="icon-text-text">Русский</span>
+                    </button>
+                    <div class="header-languages-list">
+                        <div class="header-languages-item"><a href="#">Английский</a></div>
+                        <div class="header-languages-item"><a href="#">Русский</a></div>
+                        <div class="header-languages-item"><a href="#">Немецкий</a></div>
+                        <div class="header-languages-item"><a href="#">Китайский</a></div>
+                    </div>
+                </div>
+
+                <div class="buy">
+                    <a href="#" class="btn btn--outline btn--sm">Купить</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-menu-overlay"></div>
+    </header>
+    <div class="scrim"></div>
+    <div class="drawer" data-drawer>
+    </div>
+
+
+
+
+    <main>
+        <section class="hero" data-hero aria-roledescription="carousel">
+            <div class="hero__slide is-active" data-duration="10">
+                <div class="hero__glow">
+                </div>
+                <video class="hero__video" autoplay muted loop playsinline src="https://new.isg.dev/slider/video.mp4">
+                </video>
+                <div class="hero__overlay">
+                </div>
+                <div class="hero__squares squares" data-squares="12" data-cell="48" data-x="0.5">
+                </div>
+                <div class="hero__inner container">
+                    <div class="hero__content">
+                        <p class="hero__tag">С 2006 года</p>
+                        <h1 class="hero__title">Технологии, которым доверяют <em class="hero__accent">платежи и
+                                безопасность</em>
+                        </h1>
+                        <p class="hero__text">Платёжные системы, встраиваемая ОС, биометрия и киосковое ПО для банков,
+                            ритейла и государства.</p>
+                        <div class="hero__actions">
+                            <a class="btn btn--primary" href="#products">
+                                <span class="btn__label">Наши решения</span>
+                                <svg class="btn__icon" aria-hidden="true">
+                                    <use href="#icon-arrow" />
+                                </svg>
+                            </a>
+                            <a class="btn btn--outline-light" href="#contacts">
+                                <span class="btn__label">Связаться с нами</span>
+                                <svg class="btn__icon" aria-hidden="true">
+                                    <use href="#icon-arrow" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__slide hero__slide--green" data-duration="7">
+                <div class="hero__glow">
+                </div>
+                <div class="hero__squares squares" data-squares="12" data-cell="48" data-x="0.5">
+                </div>
+                <div class="hero__inner container">
+                    <div class="hero__content">
+                        <p class="hero__tag">Карты Solflare</p>
+                        <h1 class="hero__title">Карта Mastercard <em class="hero__accent">под ключ</em>
+                        </h1>
+                        <p class="hero__text">Оформим карту Solflare, настроим защиту устройства и пополнение за одну
+                            сессию.</p>
+                        <div class="hero__actions">
+                            <a class="btn btn--accent" href="#">
+                                <span class="btn__label">Заказать карту</span>
+                                <svg class="btn__icon" aria-hidden="true">
+                                    <use href="#icon-arrow" />
+                                </svg>
+                            </a>
+                            <a class="btn btn--outline-light" href="#">
+                                <span class="btn__label">Подробнее</span>
+                                <svg class="btn__icon" aria-hidden="true">
+                                    <use href="#icon-arrow" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="assets/img/hero/hero-solflare.webp" alt="" class="hero__img">
+                </div>
+            </div>
+            <div class="hero__slide hero__slide--blue" data-duration="7">
+                <div class="hero__glow">
+                </div>
+                <div class="hero__squares squares" data-squares="12" data-cell="48" data-x="0.5">
+                </div>
+                <div class="hero__inner container">
+                    <div class="hero__content">
+                        <p class="hero__tag">ПО ALLVEND</p>
+                        <h1 class="hero__title">Автоматизация продаж <em class="hero__accent">без очередей</em>
+                        </h1>
+                        <p class="hero__text">Киоски самообслуживания для ресторанов, магазинов и дилерских центров.</p>
+                        <div class="hero__actions">
+                            <a class="btn btn--primary" href="#">
+                                <span class="btn__label">Подробнее</span>
+                                <svg class="btn__icon" aria-hidden="true">
+                                    <use href="#icon-arrow" />
+                                </svg>
+                            </a>
+                            <a class="btn btn--outline-light" href="#">
+                                <span class="btn__label">Купить</span>
+                                <svg class="btn__icon" aria-hidden="true">
+                                    <use href="#icon-arrow" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="assets/img/hero/hero-allvend.png" alt="" class="hero__img">
+                </div>
+            </div>
+            <div class="hero__slide hero__slide--green" data-duration="7">
+                <div class="hero__glow">
+                </div>
+                <div class="hero__squares squares" data-squares="12" data-cell="48" data-x="0.5">
+                </div>
+                <div class="hero__inner container">
+                    <div class="hero__content">
+                        <p class="hero__tag">Система SkySend</p>
+                        <h1 class="hero__title">Приём платежей <em class="hero__accent">быстро и надёжно</em>
+                        </h1>
+                        <p class="hero__text">Кластерная система приёма платежей на современных технологиях.</p>
+                        <div class="hero__actions">
+                            <a class="btn btn--primary" href="#">
+                                <span class="btn__label">Подключиться</span>
+                                <svg class="btn__icon" aria-hidden="true">
+                                    <use href="#icon-arrow" />
+                                </svg>
+                            </a>
+                            <a class="btn btn--outline-light" href="#">
+                                <span class="btn__label">Узнать больше</span>
+                                <svg class="btn__icon" aria-hidden="true">
+                                    <use href="#icon-arrow" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="assets/img/hero/hero-skysend.webp" alt="" class="hero__img">
+                </div>
+            </div>
+            <div class="hero__controls">
+                <div class="hero__controls-inner container">
+                    <div class="hero__tabs">
+                        <button class="hero__tab is-active" type="button">
+                            <span class="hero__tab-progress">
+                            </span>О группе</button>
+                        <button class="hero__tab" type="button">
+                            <span class="hero__tab-progress">
+                            </span>Solflare</button>
+                        <button class="hero__tab" type="button">
+                            <span class="hero__tab-progress">
+                            </span>ALLVEND</button>
+                        <button class="hero__tab" type="button">
+                            <span class="hero__tab-progress">
+                            </span>SkySend</button>
+                    </div>
+                    <div class="hero__arrows">
+                        <button class="hero__arrow hero__arrow--prev" type="button" data-hero-prev aria-label="Назад">
+                            <svg class="hero__arrow-icon" aria-hidden="true">
+                                <use href="#icon-chevron" />
+                            </svg>
+                        </button>
+                        <button class="hero__arrow hero__arrow--next" type="button" data-hero-next aria-label="Вперёд">
+                            <svg class="hero__arrow-icon" aria-hidden="true">
+                                <use href="#icon-chevron" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section " id="shop">
+            <div class="container">
+                <header class="section__head reveal">
+                    <div>
+                        <h2 class="section__title">Популярные покупки</h2>
+                    </div>
+                    <a class="section__link" href="/shop/">Все продукты</a>
+                </header>
+                <div class="card-grid">
+                    <article class="card reveal reveal--delay-0">
+                        <div class="card__media placeholder">
+                            <img src="assets/img/products/img_skysend.webp" alt="" class="product-img">
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Кластерная система платежей SkySend</h3>
+                            <p class="card__price">Цена по запросу</p>
+                            <a class="btn btn--primary btn--sm" href="/shop/">
+                                <span class="btn__label">Купить</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card reveal reveal--delay-1">
+                        <div class="card__media placeholder">
+                            <img src="assets/img/products/finger_block.webp" alt="" class="product-img">
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Биометрический блок FINGER</h3>
+                            <p class="card__price">Цена по запросу</p>
+                            <a class="btn btn--primary btn--sm" href="/shop/">
+                                <span class="btn__label">Купить</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card reveal reveal--delay-2">
+                        <div class="card__media placeholder">
+                            <img src="assets/img/products/img_allvend.webp" alt="" class="product-img">
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Универсальный блок ALLVEND</h3>
+                            <p class="card__price">Цена по запросу</p>
+                            <a class="btn btn--primary btn--sm" href="/shop/">
+                                <span class="btn__label">Купить</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card reveal reveal--delay-3">
+                        <div class="card__media placeholder">
+                            <img src="assets/img/products/img_solflare.webp" alt="" class="product-img">
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Карта MasterCard<br>
+                                от Solflare</h3>
+                            <p class="card__price">3 000 ₽</p>
+                            <a class="btn btn--primary btn--sm" href="/shop/">
+                                <span class="btn__label">Купить</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- ===================== Products ===================== -->
+        <section class="section section--alt reveal " id="products">
+            <div class="container">
+                <div class="product-grid">
+                    <article class="product-tile reveal reveal--delay-0">
+                        <div class="product-tile__media">
+                            <img class="product-tile__img" src="./assets/img/products/img_solflare.webp" alt=""
+                                loading="lazy">
+                        </div>
+                        <div class="product-tile__body">
+                            <p class="product-tile__tag">Карты Solflare</p>
+                            <h3 class="product-tile__title">Карта MasterCard от Solflare</h3>
+                            <p class="product-tile__text">Твоя карта. Твои деньги. Твои правила. Оформим карту, настроим
+                                защиту устройства и пополнение за одну сессию.</p>
+                            <ul class="product-tile__list">
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Оформление за одну сессию</span></li>
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Защита устройства под ключ</span></li>
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Пополнение настроим сразу</span></li>
+                            </ul>
+                            <div class="product-tile__actions">
+                                <a class="btn btn--primary" href="#">
+                                    <span class="btn__label">Подробнее</span>
+                                    <svg class="btn__icon" aria-hidden="true">
+                                        <use href="#icon-arrow" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn--outline" href="#">
+                                    <span class="btn__label">Купить</span>
+                                    <svg class="btn__icon" aria-hidden="true">
+                                        <use href="#icon-arrow" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-tile reveal reveal--delay-1">
+                        <div class="product-tile__media">
+                            <img class="product-tile__img" src="./assets/img/products/img_allvend.webp" alt=""
+                                loading="lazy">
+                        </div>
+                        <div class="product-tile__body">
+                            <p class="product-tile__tag">Киосковое ПО</p>
+                            <h3 class="product-tile__title">ПО ALLVEND</h3>
+                            <p class="product-tile__text">Автоматизация продаж в ресторанах, магазинах и дилерских
+                                центрах: каталог, корзина, оплата картой или наличными.</p>
+                            <ul class="product-tile__list">
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Каталог товаров и услуг</span></li>
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Оплата картой и наличными</span></li>
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Меньше очередей, выше доходы точек</span></li>
+                            </ul>
+                            <div class="product-tile__actions">
+                                <a class="btn btn--primary" href="#">
+                                    <span class="btn__label">Подробнее</span>
+                                    <svg class="btn__icon" aria-hidden="true">
+                                        <use href="#icon-arrow" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn--outline" href="#">
+                                    <span class="btn__label">Купить</span>
+                                    <svg class="btn__icon" aria-hidden="true">
+                                        <use href="#icon-arrow" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-tile reveal reveal--delay-0">
+                        <div class="product-tile__media">
+                            <img class="product-tile__img" src="./assets/img/products/img_skysend.webp" alt=""
+                                loading="lazy">
+                        </div>
+                        <div class="product-tile__body">
+                            <p class="product-tile__tag">Платёжная система</p>
+                            <h3 class="product-tile__title">Система приёма платежей SkySend</h3>
+                            <p class="product-tile__text">Кластерная система приёма платежей на современных технологиях:
+                                быстрая и безопасная обработка транзакций.</p>
+                            <ul class="product-tile__list">
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Кластерная архитектура</span></li>
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Интеграция по API</span></li>
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Аптайм 99,98% за 12 месяцев</span></li>
+                            </ul>
+                            <div class="product-tile__actions">
+                                <a class="btn btn--primary" href="#">
+                                    <span class="btn__label">Подробнее</span>
+                                    <svg class="btn__icon" aria-hidden="true">
+                                        <use href="#icon-arrow" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn--outline" href="#">
+                                    <span class="btn__label">Купить</span>
+                                    <svg class="btn__icon" aria-hidden="true">
+                                        <use href="#icon-arrow" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-tile reveal reveal--delay-1">
+                        <div class="product-tile__media">
+                            <img class="product-tile__img" src="./assets/img/products/img_fastsys.webp" alt=""
+                                loading="lazy">
+                        </div>
+                        <div class="product-tile__body">
+                            <p class="product-tile__tag">Встраиваемая ОС</p>
+                            <h3 class="product-tile__title">Операционная система FastSYS</h3>
+                            <p class="product-tile__text">Российская встраиваемая ОС на базе ядра Linux и открытого ПО
+                                для программно-аппаратных комплексов.</p>
+                            <ul class="product-tile__list">
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Построена на ядре Linux</span></li>
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Для программно-аппаратных комплексов</span></li>
+                                <li><svg class="product-tile__check" aria-hidden="true">
+                                        <use href="#icon-check" />
+                                    </svg><span>Российская разработка</span></li>
+                            </ul>
+                            <div class="product-tile__actions">
+                                <a class="btn btn--primary" href="#">
+                                    <span class="btn__label">Подробнее</span>
+                                    <svg class="btn__icon" aria-hidden="true">
+                                        <use href="#icon-arrow" />
+                                    </svg>
+                                </a>
+                                <a class="btn btn--outline" href="#">
+                                    <span class="btn__label">Купить</span>
+                                    <svg class="btn__icon" aria-hidden="true">
+                                        <use href="#icon-arrow" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section stats">
+            <div class="stats__decor squares reveal" data-squares="14" data-cell="48">
+            </div>
+            <div class="container stats__container">
+                <header class="section__head reveal stats__head">
+                    <div>
+                        <h2 class="section__title">ISG в цифрах</h2>
+                        <p class="section__lead">Что важно при выборе технологического партнёра.</p>
+                    </div>
+                </header>
+                <div class="stats__list">
+                    <div class="stats__item reveal reveal--delay-0">
+                        <div class="stats__value" data-count="20">20</div>
+                        <p class="stats__label">лет на рынке, с 2006 года</p>
+                    </div>
+                    <div class="stats__item stats__item--green reveal reveal--delay-1">
+                        <div class="stats__value" data-count="12">12</div>
+                        <p class="stats__label">стран, где работают наши системы</p>
+                    </div>
+                    <div class="stats__item reveal reveal--delay-2">
+                        <div class="stats__value" data-count="10000">10 000+</div>
+                        <p class="stats__label">киосков и терминалов в эксплуатации</p>
+                    </div>
+                    <div class="stats__item stats__item--green reveal reveal--delay-3">
+                        <div class="stats__value" data-count="100">100+</div>
+                        <p class="stats__label">направлений развития</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section jobs" id="careers">
+            <div class="container">
+                <header class="section__head reveal">
+                    <div>
+                        <h2 class="section__title">Работа в компании</h2>
+                        <p class="section__lead">Присоединяйтесь к команде, которая строит инфраструктуру платежей и
+                            безопасности.</p>
+                    </div>
+                </header>
+                <div class="jobs__list">
+                    <a class="vacancy reveal reveal--delay-0" href="/company/careers/">
+                        <span class="vacancy__tag">Вакансия</span>
+                        <div>
+                            <h3 class="vacancy__title">DevOps Engineer</h3>
+                            <span class="vacancy__salary">до 250 тыс. ₽</span>
+                            <span class="vacancy__more">Читать подробнее →</span>
+                        </div>
+                    </a>
+                    <a class="vacancy reveal reveal--delay-1" href="/company/careers/">
+                        <span class="vacancy__tag">Вакансия</span>
+                        <div>
+                            <h3 class="vacancy__title">Backend Developer</h3>
+                            <span class="vacancy__salary">до 220 тыс. ₽</span>
+                            <span class="vacancy__more">Читать подробнее →</span>
+                        </div>
+                    </a>
+                    <a class="vacancy reveal reveal--delay-2" href="/company/careers/">
+                        <span class="vacancy__tag">Вакансия</span>
+                        <div>
+                            <h3 class="vacancy__title">UI/UX Designer</h3>
+                            <span class="vacancy__salary">до 120 тыс. ₽</span>
+                            <span class="vacancy__more">Читать подробнее →</span>
+                        </div>
+                    </a>
+                    <a class="vacancy reveal reveal--delay-3" href="/company/careers/">
+                        <span class="vacancy__tag">Вакансия</span>
+                        <div>
+                            <h3 class="vacancy__title">Embedded Software Engineer</h3>
+                            <span class="vacancy__salary">до 200 тыс. ₽</span>
+                            <span class="vacancy__more">Читать подробнее →</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="jobs__more reveal">
+                    <a class="btn btn--outline" href="/company/careers/">
+                        <span class="btn__label">Все вакансии</span>
+                        <svg class="btn__icon" aria-hidden="true">
+                            <use href="#icon-arrow" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="section section--alt features" id="why">
+            <div class="container">
+                <header class="section__head reveal">
+                    <div>
+                        <h2 class="section__title">Почему мы</h2>
+                    </div>
+                </header>
+                <div class="features__list">
+                    <article class="feature reveal reveal--delay-0">
+                        <div class="feature__head">
+                            <div class="feature__icon">
+                                <svg class="feature__icon-svg" aria-hidden="true">
+                                    <use href="#icon-box" />
+                                </svg>
+                            </div>
+                            <span class="feature__num">01</span>
+                        </div>
+                        <h3 class="feature__title">Готовые технологические решения</h3>
+                        <p class="feature__text">Предлагаем разработанные продукты, которые можно внедрять и
+                            использовать для решения конкретных бизнес-задач.</p>
+                    </article>
+                    <article class="feature feature--green reveal reveal--delay-1">
+                        <div class="feature__head">
+                            <div class="feature__icon">
+                                <svg class="feature__icon-svg" aria-hidden="true">
+                                    <use href="#icon-shield" />
+                                </svg>
+                            </div>
+                            <span class="feature__num">02</span>
+                        </div>
+                        <h3 class="feature__title">Проверенные технологии</h3>
+                        <p class="feature__text">Используем современные программные и аппаратные технологии, уделяя
+                            внимание стабильности и производительности решений.</p>
+                    </article>
+                    <article class="feature reveal reveal--delay-2">
+                        <div class="feature__head">
+                            <div class="feature__icon">
+                                <svg class="feature__icon-svg" aria-hidden="true">
+                                    <use href="#icon-layers" />
+                                </svg>
+                            </div>
+                            <span class="feature__num">03</span>
+                        </div>
+                        <h3 class="feature__title">Комплексный подход</h3>
+                        <p class="feature__text">Объединяем программное обеспечение, оборудование и инфраструктурные
+                            компоненты в единую экосистему.</p>
+                    </article>
+                    <article class="feature feature--green reveal reveal--delay-3">
+                        <div class="feature__head">
+                            <div class="feature__icon">
+                                <svg class="feature__icon-svg" aria-hidden="true">
+                                    <use href="#icon-headset" />
+                                </svg>
+                            </div>
+                            <span class="feature__num">04</span>
+                        </div>
+                        <h3 class="feature__title">Техническая поддержка</h3>
+                        <p class="feature__text">Сопровождаем наши решения, помогаем с настройкой, внедрением и
+                            дальнейшей эксплуатацией.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="news">
+            <div class="container">
+                <header class="section__head reveal">
+                    <div>
+                        <h2 class="section__title">Новости</h2>
+                    </div>
+                    <a class="section__link" href="/news/">Все новости</a>
+                </header>
+                <div class="card-grid">
+                    <article class="card reveal reveal--delay-0">
+                        <div class="card__media placeholder ">
+                            <span class="placeholder__body">
+                                <img src="assets/img/news/news-post_ftp.jpg"
+                                    alt="Запущен FTP-сервер Inform Systems Group" loading="lazy">
+                            </span>
+                        </div>
+                        <div class="card__body">
+                            <time class="card__date">10.11.2026</time>
+                            <h3 class="card__title">Запущен FTP-сервер Inform Systems Group</h3>
+                            <p class="card__text">Центральный FTP-сервер группы введён в эксплуатацию.</p>
+                            <a class="btn btn--outline btn--sm" href="/news/">
+                                <span class="btn__label">Читать далее</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card reveal reveal--delay-1">
+                        <div class="card__media placeholder">
+                            <img src="assets/img/news/az.webp" alt="Бизнес-миссия группы в Азербайджане" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <time class="card__date">10.11.2026</time>
+                            <h3 class="card__title">Бизнес-миссия группы в Азербайджане</h3>
+                            <p class="card__text">Inform Systems Group приняла участие в бизнес-миссии в Азербайджан.
+                            </p>
+                            <a class="btn btn--outline btn--sm" href="/news/">
+                                <span class="btn__label">Читать далее</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card reveal reveal--delay-2">
+                        <div class="card__media placeholder">
+                            <img src="assets/img/news/news-post_polkadot-2.jpeg"
+                                alt="Уважаемые номинаторы сети Polkadot" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <time class="card__date">10.11.2026</time>
+                            <h3 class="card__title">Уважаемые номинаторы сети Polkadot</h3>
+                            <p class="card__text">В связи с улучшением инфраструктуры и повышением стабильности работы.
+                            </p>
+                            <a class="btn btn--outline btn--sm" href="/news/">
+                                <span class="btn__label">Читать далее</span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card reveal reveal--delay-3">
+                        <div class="card__media placeholder">
+                            <img src="assets/img/news/news-post_polkadot-1.jpg" alt="Уважаемые валидаторы Polkadot"
+                                loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <time class="card__date">27.10.2026</time>
+                            <h3 class="card__title">Уважаемые валидаторы Polkadot</h3>
+                            <p class="card__text">При миграции серверов возникла ошибка с дублированием экземпляра.</p>
+                            <a class="btn btn--outline btn--sm" href="/news/">
+                                <span class="btn__label">Читать далее</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section section--alt partners">
+            <div class="container">
+                <header class="section__head reveal">
+                    <div>
+                        <h2 class="section__title">Партнёры</h2>
+                    </div>
+                </header>
+            </div>
+            <div class="partners__rows reveal">
+                <div class="partners__track">
+                    <div class="partners__item"><img src="assets/img/partners/bistrodengi.png" alt="Быстроденьги"></div>
+                    <div class="partners__item"><img src="assets/img/partners/gazprom.webp" alt="Газпром"></div>
+                    <div class="partners__item"><img src="assets/img/partners/logo-coral-travel.png" alt="Coral Travel">
+                    </div>
+                    <div class="partners__item"><img src="assets/img/partners/logo-ediniy-koshelek.png"
+                            alt="Единый кошелёк"></div>
+                    <div class="partners__item"><img src="assets/img/partners/mailru.webp" alt="Mail.ru"></div>
+                    <div class="partners__item"><img src="assets/img/partners/megafon.svg" alt="МегаФон"></div>
+                    <div class="partners__item"><img src="assets/img/partners/mmc.png" alt="MMC"></div>
+                    <div class="partners__item"><img src="assets/img/partners/moi-dokumenti.svg" alt="Мои документы">
+                    </div>
+                    <div class="partners__item"><img src="assets/img/partners/mts.webp" alt="МТС"></div>
+                </div>
+
+                <div class="partners__track partners__track--reverse">
+                    <div class="partners__item"><img src="assets/img/partners/red-taxi.png" alt="Red Taxi"></div>
+                    <div class="partners__item"><img src="assets/img/partners/rostelecom.png" alt="Ростелеком"></div>
+                    <div class="partners__item"><img src="assets/img/partners/sbank.png" alt="Сбербанк"></div>
+                    <div class="partners__item"><img src="assets/img/partners/snt.png" alt="СНТ"></div>
+                    <div class="partners__item"><img src="assets/img/partners/tehnologii-vendinga.png"
+                            alt="Технологии вендинга"></div>
+                    <div class="partners__item"><img src="assets/img/partners/webmoney_logo.png" alt="WebMoney"></div>
+                    <div class="partners__item"><img src="assets/img/partners/xsolla.png" alt="Xsolla"></div>
+                    <div class="partners__item"><img src="assets/img/partners/yandex.webp" alt="Яндекс"></div>
+                </div>
+
+                <div class="jobs__more reveal is-visible">
+                    <a class="btn btn--outline" href="/company/careers/">
+                        <span class="btn__label">Партнерство</span>
+                        <svg class="btn__icon" aria-hidden="true">
+                            <use href="#icon-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="isg-footer">
+
+        <div class="container">
+
+            <div class="isg-footer__top">
+
+                <div class="isg-footer__brand">
+                    <a class="isg-footer__logo" href="/">
+                        <img src="assets/logo-white-vertical.svg" alt="Inform Systems Group">
+                    </a>
+                </div>
+
+                <div class="isg-footer__contacts">
+                    <h3 class="isg-footer__heading">Написать нам</h3>
+                    <ul class="isg-footer__contact-list">
+                        <li>
+                            <a href="https://t.me/infsysgroup" class="icon-text" target="_blank" rel="noopener">
+                                <span class="icon-text-icon">
+                                    <svg width="18" height="18" aria-hidden="true">
+                                        <use href="#icon-telegram" />
+                                    </svg>
+                                </span>
+                                <span class="icon-text-text">@infsysgroup</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@isg.dev" class="icon-text">
+                                <span class="icon-text-icon">
+                                    <svg width="18" height="18" aria-hidden="true">
+                                        <use href="#icon-mail" />
+                                    </svg>
+                                </span>
+                                <span class="icon-text-text">info@isg.dev</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <nav class="isg-footer__nav" aria-label="Меню сайта">
+
+                    <ul class="isg-footer__menu">
+
+                        <li class="isg-footer__menu-item">
+
+                            <a class="isg-footer__menu-link isg-footer__menu-link--top" href="#products">Продукты</a>
+
+                            <ul class="isg-footer__submenu">
+
+                                <li><a class="isg-footer__menu-link" href="#products-development">Разработки</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#devices">Устройства</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#innovations">Инновации</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#technologies">Технологии</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="isg-footer__menu-item">
+
+                            <a class="isg-footer__menu-link isg-footer__menu-link--top" href="#services">Услуги</a>
+
+                            <ul class="isg-footer__submenu">
+
+                                <li><a class="isg-footer__menu-link" href="#web3-services">Услуги в области WEB3</a>
+                                </li>
+
+                                <li><a class="isg-footer__menu-link" href="#skysend-services">Услуги системы SkySend</a>
+                                </li>
+
+                                <li><a class="isg-footer__menu-link" href="#software-development">Разработка и поддержка
+                                        ПО</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#analytics">Аналитическая работа</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#implementation">Внедрение решений</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="isg-footer__menu-item">
+
+                            <a class="isg-footer__menu-link isg-footer__menu-link--top" href="#support">Поддержка</a>
+
+                            <ul class="isg-footer__submenu">
+
+                                <li><a class="isg-footer__menu-link" href="#downloads">Загрузки</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#feedback">Обратная связь</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="isg-footer__menu-item">
+
+                            <a class="isg-footer__menu-link isg-footer__menu-link--top" href="#company">Компания</a>
+
+                            <ul class="isg-footer__submenu">
+
+                                <li><a class="isg-footer__menu-link" href="#mission">Миссия</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#history">История</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#licenses">Лицензии</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#partnership">Партнерство</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#careers">Работа</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#contacts">Контакты</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="isg-footer__menu-item isg-footer__menu-item--wide">
+
+                            <a class="isg-footer__menu-link isg-footer__menu-link--top" href="#industries">Сферы</a>
+
+                            <ul class="isg-footer__submenu">
+
+                                <li><a class="isg-footer__menu-link" href="#individuals">Физическим лицам</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#kiosk-manufacturers">Производители
+                                        киосков</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#banking">Банки и финансы</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#healthcare">Медицина и здравоохранение</a>
+                                </li>
+
+                                <li><a class="isg-footer__menu-link" href="#automotive">Автопроизводители</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#integrators">Системные интеграторы</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#fast-food">Быстрое питание</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#government">Государственный сектор</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#telecom">Операторы связи</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#retail">Торговые сети</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#hospitality">Гостиничный бизнес</a></li>
+
+                                <li><a class="isg-footer__menu-link" href="#transport">Пассажирские перевозки</a></li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+            <!-- TODO(content): ссылки «Политика конфиденциальности», «Карта сайта» и соцсети — заглушки "#" -->
+
+            <div class="isg-footer__bottom">
+
+                <p class="isg-footer__copy">© 2006–<span class="isg-footer__year">2026</span> Inform Systems Group • Все
+                    права защищены</p>
+
+                <ul class="isg-footer__socials">
+
+                    <li><a class="isg-footer__social" href="#" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z">
+                                </path>
+                            </svg>
+                        </a></li>
+
+                    <li><a class="isg-footer__social" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z">
+                                </path>
+                            </svg>
+                        </a></li>
+
+                    <li><a class="isg-footer__social" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334">
+                                </path>
+                            </svg>
+                        </a></li>
+
+                    <li><a class="isg-footer__social" href="#" target="_blank" rel="noopener" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-youtube" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z">
+                                </path>
+                            </svg>
+                        </a></li>
+
+                    <li><a class="isg-footer__social" href="#" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951">
+                                </path>
+                            </svg>
+                        </a></li>
+
+
+                </ul>
+
+                <ul class="isg-footer__docs">
+
+                    <li><a href="#">Политика конфиденциальности</a></li>
+
+                    <li><a href="#">Карта сайта</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    <script src="js/header-menu.js"></script>
+</body>
+
+</html>
