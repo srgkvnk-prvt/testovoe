@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Магазин — Inform Systems Group</title>
+<script src="js/theme-init.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+<svg class="sprite" aria-hidden="true">
+<defs>
+<symbol id="logo-mark" viewBox="0 0 40 40">
+<g clip-path="url(#clip0_2137_302)">
+<path d="M13.5562 14.3266C13.5562 14.5322 13.5224 14.73 13.46 14.9144L17.9502 19.4472C18.0816 19.5818 18.258 19.6556 18.4464 19.6556C18.5374 19.6556 18.6262 19.6384 18.7118 19.6038C18.9744 19.4964 19.1444 19.243 19.1444 18.959V17.2336C19.1438 16.2942 19.1438 15.2494 19.1444 14.1596C18.511 13.869 18.071 13.229 18.071 12.486C18.071 11.7424 18.5114 11.1022 19.1464 10.8124V4.10645L18.2084 4.94365C16.9652 6.04884 15.9118 7.10165 14.9884 8.16085C14.065 9.21885 13.281 10.273 12.591 11.3834C12.3622 11.7516 12.1458 12.1264 11.9448 12.5004C12.853 12.6124 13.5562 13.3872 13.5562 14.3266Z" fill="#0166FF"/>
+<path d="M19.1392 35.8938L19.1558 30.7308C19.179 30.0674 18.9602 29.5368 18.4658 29.061L10.942 21.53C10.7808 21.577 10.6104 21.6016 10.4346 21.6016C10.304 21.6016 10.1758 21.5876 10.0532 21.5618L10.1534 22.1866C10.381 23.5996 10.8306 25.0224 11.49 26.4148C12.5274 28.6058 13.9616 30.6398 15.9372 32.7054L15.9478 32.716L15.9484 32.7166L19.1392 35.8938Z" fill="#0166FF"/>
+<path d="M27.637 17.8736C27.6086 17.745 27.5932 17.6116 27.5932 17.4742C27.5932 16.503 28.3454 15.7076 29.2988 15.6394C29.1284 15.0834 28.9226 14.5236 28.6832 13.969C28.378 14.1938 28.0012 14.3266 27.5934 14.3266C27.338 14.3266 27.0946 14.2748 26.8736 14.1806L24.5286 16.5216L24.518 16.5328C23.6178 17.431 21.182 19.8676 21.166 19.8822C21.0432 19.9936 20.7878 20.2252 20.7858 20.6138L20.7832 22.984C20.7832 23.26 20.9464 23.51 21.2004 23.6222C21.2886 23.6606 21.3848 23.6806 21.479 23.6806C21.6548 23.6806 21.8232 23.615 21.9534 23.4956L27.637 17.8736Z" fill="#0166FF"/>
+<path d="M19.144 25.6933C19.146 25.9745 18.9788 26.2279 18.7182 26.3381C18.6314 26.3745 18.5398 26.3931 18.4462 26.3931C18.2624 26.3931 18.0892 26.3221 17.9586 26.1927L12.1522 20.4227C12.2318 20.2177 12.2756 19.9949 12.2756 19.7613C12.2756 18.7443 11.4516 17.9205 10.4348 17.9205C10.3234 17.9205 10.2146 17.9305 10.1084 17.9497C10.2086 17.2247 10.3672 16.4943 10.5808 15.7739C10.8938 16.0207 11.288 16.1667 11.7164 16.1667C11.9082 16.1667 12.0932 16.1375 12.267 16.0825L17.304 21.1387C17.7996 21.6329 18.222 22.0509 18.6334 22.4549C19.0042 22.8191 19.1688 23.2171 19.1522 23.7079L19.144 25.6933Z" fill="#39AC59"/>
+<path d="M25.7961 12.8833C25.7675 12.7553 25.7529 12.6225 25.7529 12.4859C25.7529 11.7025 26.2425 11.0331 26.9323 10.7685C25.6307 8.80689 23.9677 6.95089 21.7163 4.94549L20.7769 4.10889V10.8619C21.3567 11.1711 21.7513 11.7827 21.7513 12.4859C21.7513 13.1897 21.3567 13.8013 20.7769 14.1105V16.3467C20.8027 16.6201 20.9793 16.8463 21.2399 16.9385C21.3161 16.9651 21.3945 16.9783 21.4727 16.9783C21.6611 16.9783 21.8375 16.9033 21.9703 16.7667L25.7961 12.8833Z" fill="#39AC59"/>
+<path d="M20.7766 35.8938L20.7701 27.7126C20.7675 27.2496 20.9267 26.8662 21.2583 26.5404C21.7465 26.0588 22.2619 25.548 22.8331 24.9776L28.6507 19.1406C28.8881 19.2528 29.1535 19.315 29.4335 19.315C29.6059 19.315 29.773 19.2912 29.9316 19.246C29.9536 19.7144 29.9522 20.194 29.927 20.6708V20.6714C29.864 21.8694 29.6605 23.017 29.3055 24.18C28.9533 25.3376 28.4611 26.4692 27.8023 27.6394C26.6095 29.7582 25.0002 31.7782 22.904 33.7854L20.7766 35.8938Z" fill="#39AC59"/>
+</g>
+<defs>
+<clipPath id="clip0_2137_302">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</symbol>
+<symbol id="logo-full" viewBox="0 0 212 208">
+<g clip-path="url(#clip0_2137_185)">
+<g clip-path="url(#clip1_2137_185)">
+<path d="M72.2184 47.385C72.2184 48.3381 72.0622 49.2551 71.7719 50.1101L92.5912 71.1256C93.1998 71.7503 94.0188 72.0907 94.8917 72.0907C95.3142 72.0907 95.7247 72.0106 96.1211 71.8504C97.3385 71.3519 98.1254 70.1765 98.1254 68.8611V60.8621C98.1233 56.5072 98.1233 51.6638 98.1254 46.6102C95.1881 45.2627 93.1498 42.2953 93.1498 38.8515C93.1498 35.4036 95.1921 32.4363 98.1354 31.0928V0L93.7885 3.88234C88.024 9.00608 83.1406 13.8875 78.8598 18.799C74.579 23.7045 70.9429 28.592 67.7454 33.7398C66.6842 35.4477 65.681 37.1836 64.75 38.9196C68.9587 39.4381 72.2184 43.0302 72.2184 47.385Z" fill="white"/>
+<path d="M98.1032 147.377L98.1793 123.44C98.2874 120.365 97.2722 117.904 94.9797 115.699L60.0986 80.7822C59.3518 81.0005 58.5609 81.1146 57.746 81.1146C57.1393 81.1146 56.5467 81.0505 55.978 80.9304L56.4425 83.8276C57.4977 90.379 59.5821 96.9764 62.6395 103.432C67.4489 113.591 74.0983 123.019 83.2586 132.596L83.3086 132.646L83.3106 132.65L98.1032 147.377Z" fill="white"/>
+<path d="M137.501 63.8294C137.369 63.2327 137.299 62.614 137.299 61.9773C137.299 57.4742 140.787 53.7861 145.206 53.4698C144.415 50.8929 143.462 48.296 142.353 45.7251C140.937 46.7683 139.191 47.383 137.299 47.383C136.116 47.383 134.986 47.1427 133.961 46.7062L123.089 57.5603L123.039 57.6124C118.866 61.7771 107.572 73.0737 107.498 73.1418C106.929 73.6584 105.744 74.7316 105.736 76.5336L105.724 87.5219C105.724 88.8013 106.48 89.9606 107.658 90.4812C108.066 90.6594 108.513 90.7515 108.949 90.7515C109.764 90.7515 110.545 90.4471 111.148 89.8925L137.501 63.8294Z" fill="white"/>
+<path d="M98.1253 100.084C98.1353 101.388 97.3605 102.563 96.1511 103.073C95.7486 103.244 95.3242 103.328 94.8897 103.328C94.0387 103.328 93.2358 102.999 92.6292 102.399L65.709 75.6488C66.0774 74.6977 66.2817 73.6646 66.2817 72.5834C66.2817 67.8681 62.4614 64.0478 57.7461 64.0478C57.2295 64.0478 56.725 64.0939 56.2324 64.184C56.6969 60.8222 57.4318 57.4364 58.4229 54.0967C59.8745 55.24 61.7005 55.9167 63.6888 55.9167C64.5778 55.9167 65.4367 55.7806 66.2416 55.5263L89.5938 78.9685C91.8903 81.2591 93.8505 83.1973 95.7567 85.0713C97.4766 86.7592 98.2394 88.6053 98.1613 90.8818L98.1253 100.084Z" fill="white"/>
+<path d="M128.966 40.6917C128.834 40.0991 128.766 39.4824 128.766 38.8497C128.766 35.2176 131.036 32.1141 134.234 30.8868C128.199 21.7926 120.488 13.187 110.051 3.89055L105.696 0.012207V31.3212C108.383 32.7549 110.213 35.59 110.213 38.8497C110.213 42.1133 108.383 44.9485 105.696 46.3821V56.7497C105.816 58.0171 106.633 59.0663 107.842 59.4928C108.197 59.6149 108.559 59.677 108.921 59.677C109.794 59.677 110.613 59.3286 111.228 58.6959L128.966 40.6917Z" fill="white"/>
+<path d="M105.694 147.377L105.664 109.447C105.652 107.3 106.389 105.522 107.928 104.012C110.193 101.78 112.581 99.4114 115.23 96.7664L142.203 69.7041C143.304 70.2247 144.533 70.513 145.833 70.513C146.632 70.513 147.406 70.4029 148.143 70.1926C148.245 72.3631 148.239 74.5876 148.121 76.798V76.802C147.829 82.3563 146.884 87.6762 145.24 93.0683C143.606 98.4343 141.326 103.682 138.27 109.106C132.74 118.929 125.28 128.294 115.561 137.602L105.694 147.377Z" fill="white"/>
+<path d="M4.41235 181.541H0.00341797V206.887H4.41235V181.541Z" fill="white"/>
+<path d="M36.0016 192.009H12.6755V185.948H41.694V181.539H15.1563C11.346 181.539 8.26855 184.615 8.26855 188.427V189.528C8.26855 193.338 11.344 196.416 15.1563 196.416H38.4824V202.476H9.46189V206.885H36.0016C39.8119 206.885 42.8893 203.81 42.8893 199.998V198.896C42.8893 195.086 39.8119 192.009 36.0016 192.009Z" fill="white"/>
+<path d="M80.173 185.948V181.539H53.6333C49.8231 181.539 46.7456 184.615 46.7456 188.427V199.998C46.7456 203.808 49.821 206.885 53.6333 206.885H73.2853C77.0956 206.885 80.173 203.81 80.173 199.998V192.009H62.8616V196.418H75.7641V202.478H51.1525V185.948H80.173Z" fill="white"/>
+<path d="M89.7239 201.377H85.3149V206.888H89.7239V201.377Z" fill="white"/>
+<path d="M121.405 181.541H94.8638V206.887H121.403C125.214 206.887 128.291 203.812 128.291 200V188.429C128.291 184.616 125.216 181.541 121.405 181.541ZM123.884 202.478H99.2727V185.948H123.884V202.478Z" fill="white"/>
+<path d="M133.433 188.429V200C133.433 203.81 136.508 206.887 140.32 206.887H166.86V202.478H137.842V196.418H166.86V192.009H137.842V185.948H166.86V181.539H140.32C136.51 181.541 133.433 184.617 133.433 188.429Z" fill="white"/>
+<path d="M206.441 181.541L190.737 203.902L174.987 181.541H169.431L186.008 204.729C187.063 206.199 188.763 207.3 190.691 207.3C192.665 207.3 194.319 206.199 195.374 204.729L211.997 181.541H206.441Z" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2137_185">
+<rect width="212" height="207.3" fill="white"/>
+</clipPath>
+<clipPath id="clip1_2137_185">
+<rect width="211.993" height="207.3" fill="white" transform="translate(0.00341797)"/>
+</clipPath>
+</defs>
+</symbol>
+<symbol id="icon-arrow" viewBox="0 0 16 16">
+<path fill="none" stroke="currentColor" stroke-width="1.8" d="M2 8h11M9 4l4 4-4 4"/>
+</symbol>
+<symbol id="icon-chevron" viewBox="0 0 16 16">
+<path fill="none" stroke="currentColor" stroke-width="1.6" d="m6 3 5 5-5 5"/>
+</symbol>
+<symbol id="icon-check" viewBox="0 0 24 24">
+<path fill="none" stroke="currentColor" stroke-width="2" d="m4 12.5 5 5L20 6.5"/>
+</symbol>
+<symbol id="icon-image" viewBox="0 0 48 48">
+<g fill="none" stroke="currentColor" stroke-width="1.6">
+<rect x="6" y="9" width="36" height="30" rx="4"/>
+<circle cx="17" cy="20" r="3.5"/>
+<path d="m6 34 11-10 8 7 6-5 11 9"/>
+</g>
+</symbol>
+<symbol id="icon-moon" viewBox="0 0 24 24">
+<path fill="none" stroke="currentColor" stroke-width="1.7" d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/>
+</symbol>
+<symbol id="icon-sun" viewBox="0 0 24 24">
+<g fill="none" stroke="currentColor" stroke-width="1.7">
+<circle cx="12" cy="12" r="4"/>
+<path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+</g>
+</symbol>
+<symbol id="icon-burger" viewBox="0 0 20 20">
+<path fill="none" stroke="currentColor" stroke-width="1.8" d="M2 5h16M2 10h16M2 15h16"/>
+</symbol>
+<symbol id="icon-box" viewBox="0 0 24 24">
+<g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+<path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/>
+<path d="M3 7.5 12 12l9-4.5M12 12v9"/>
+</g>
+</symbol>
+<symbol id="icon-shield" viewBox="0 0 24 24">
+<g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+<path d="M12 3 4 6v6c0 4.5 3.2 8 8 9 4.8-1 8-4.5 8-9V6z"/>
+<path d="m8.5 12 2.5 2.5 4.5-5"/>
+</g>
+</symbol>
+<symbol id="icon-layers" viewBox="0 0 24 24">
+<g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+<path d="m12 3 9 4.5-9 4.5L3 7.5z"/>
+<path d="m3 12 9 4.5 9-4.5M3 16.5 12 21l9-4.5"/>
+</g>
+</symbol>
+<symbol id="icon-headset" viewBox="0 0 24 24">
+<g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+<path d="M4 14v-2a8 8 0 0 1 16 0v2"/>
+<rect x="3" y="14" width="4" height="6" rx="1.5"/>
+<rect x="17" y="14" width="4" height="6" rx="1.5"/>
+<path d="M19 20c0 1.5-2 2-5 2"/>
+</g>
+</symbol>
+<symbol id="icon-telegram" viewBox="0 0 24 24">
+<path fill="currentColor" d="M21.5 4.4 2.9 11.6c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.5-1.9-1.4-1.3zM8.6 13.7l9.7-6.1c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.3z"/>
+</symbol>
+<symbol id="icon-vk" viewBox="0 0 24 24">
+<text x="12" y="16" text-anchor="middle" font-size="11" font-weight="700" font-family="Inter,Arial" fill="currentColor">VK</text>
+</symbol>
+<symbol id="icon-youtube" viewBox="0 0 24 24">
+<path fill="currentColor" fill-rule="evenodd" d="M22 8.2a2.6 2.6 0 0 0-1.8-1.9C18.6 5.9 12 5.9 12 5.9s-6.6 0-8.2.4A2.6 2.6 0 0 0 2 8.2 27 27 0 0 0 1.6 12 27 27 0 0 0 2 15.8a2.6 2.6 0 0 0 1.8 1.9c1.6.4 8.2.4 8.2.4s6.6 0 8.2-.4a2.6 2.6 0 0 0 1.8-1.9c.3-1.3.4-2.5.4-3.8s-.1-2.5-.4-3.8zM10 15V9l5.2 3z"/>
+</symbol>
+<symbol id="icon-linkedin" viewBox="0 0 24 24">
+<text x="12" y="16" text-anchor="middle" font-size="11" font-weight="700" font-family="Inter,Arial" fill="currentColor">in</text>
+</symbol>
+<symbol id="icon-github" viewBox="0 0 24 24">
+<path fill="currentColor" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/>
+</symbol>
+<symbol id="icon-mail" viewBox="0 0 24 24">
+<path fill="none" stroke="currentColor" stroke-width="1.6" d="M3.5 6.5h17v11h-17zM3.5 7.5 12 14l8.5-6.5"/>
+</symbol>
+</defs>
+</svg>
+<header class="header">
+<div class="header__inner container">
+<a class="logo" href="/">
+<svg class="logo__mark" aria-hidden="true">
+<use href="#logo-mark"/>
+</svg>
+<span class="logo__text">Inform Systems<small class="logo__sub">GROUP</small>
+</span>
+</a>
+<nav class="nav header__nav" aria-label="Основная навигация">
+<ul class="nav__list">
+<li class="nav__item">
+<a class="nav__link" href="/solutions/">Продукты</a>
+<div class="mega">
+<div class="mega__inner container">
+<div class="mega__intro">
+<h5 class="mega__title">Продукты</h5>
+<p class="mega__text">Собственные разработки, устройства и технологии группы.</p>
+<a class="btn btn--outline btn--sm" href="/solutions/">
+<span class="btn__label">Все продукты</span>
+</a>
+</div>
+<div class="mega__cols mega__cols--4">
+<div class="mega__col">
+<h4 class="mega__heading">
+<a class="mega__heading-link" href="/solutions/developments/">
+<span class="mega__heading-text">Разработки</span>
+<span class="mega__num">01</span>
+</a>
+</h4>
+<a class="mega__link" href="/solutions/developments/finger-biometric-system/">
+<span>Биометрическая система FINGER</span>
+</a>
+<a class="mega__link" href="/solutions/developments/cloud-advertising-platform/">
+<span>Облачная рекламная платформа</span>
+</a>
+<a class="mega__link" href="/solutions/developments/fastsys-operating-system/">
+<span>Операционная система FastSYS</span>
+</a>
+<a class="mega__link" href="/solutions/developments/allvend-kiosk-software/">
+<span>ПО для киосков ALLVEND</span>
+</a>
+<a class="mega__link" href="/solutions/developments/skysend-processing-system/">
+<span>Процессинговая система SkySend</span>
+</a>
+</div>
+<div class="mega__col">
+<h4 class="mega__heading">
+<a class="mega__heading-link" href="/solutions/devices/">
+<span class="mega__heading-text">Устройства</span>
+<span class="mega__num">02</span>
+</a>
+</h4>
+<a class="mega__link" href="/solutions/devices/finger-biometric-modules/">
+<span>Биометрические блоки FINGER</span>
+</a>
+<a class="mega__link" href="/solutions/devices/unified-fiscal-server/">
+<span>Единый фискальный сервер</span>
+</a>
+<a class="mega__link" href="/solutions/devices/beauty-self-service-kiosks/">
+<span>Киоски самообслуживания Beauty</span>
+</a>
+<a class="mega__link" href="/solutions/devices/allvend-universal-modules/">
+<span>Универсальные блоки ALLVEND</span>
+</a>
+</div>
+<div class="mega__col">
+<h4 class="mega__heading">
+<a class="mega__heading-link" href="/solutions/innovations/">
+<span class="mega__heading-text">Инновации</span>
+<span class="mega__num">03</span>
+</a>
+</h4>
+<a class="mega__link" href="/solutions/innovations/smart-city-information-system/">
+<span>Единая информационная система «Умный город»</span>
+</a>
+<a class="mega__link" href="/solutions/innovations/neuron-technopark-network/">
+<span>Сеть технопарков «Нейрон»</span>
+</a>
+<a class="mega__link" href="/solutions/innovations/my-doctor-telemedicine-system/">
+<span>Система телемедицины «Мой доктор»</span>
+</a>
+</div>
+<div class="mega__col">
+<h4 class="mega__heading">
+<a class="mega__heading-link" href="/solutions/technologies/">
+<span class="mega__heading-text">Технологии</span>
+<span class="mega__num">04</span>
+</a>
+</h4>
+<a class="mega__link" href="/solutions/technologies/closed-cryptographic-key-exchange-system/">
+<span>Замкнутая система обмена криптоключами</span>
+</a>
+<a class="mega__link" href="/solutions/technologies/remote-binary-updates/">
+<span>Система удалённых бинарных обновлений</span>
+</a>
+<a class="mega__link" href="/solutions/technologies/bsd-server-cloning/">
+<span>Технология клонирования *BSD серверов</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="/service/">Услуги</a>
+<div class="mega">
+<div class="mega__inner container">
+<div class="mega__intro">
+<h5 class="mega__title">Услуги</h5>
+<p class="mega__text">Сервисы и внедрение: от WEB3 до защищённой инфраструктуры.</p>
+<a class="btn btn--outline btn--sm" href="/service/">
+<span class="btn__label">Все услуги</span>
+</a>
+</div>
+<div class="mega__cols mega__cols--5">
+<div class="mega__col">
+<h4 class="mega__heading">
+<a class="mega__heading-link" href="/service/web3-services/">
+<span class="mega__heading-text">Услуги в области WEB3</span>
+<span class="mega__num">01</span>
+</a>
+</h4>
+<a class="mega__link" href="/service/web3-services/device-security-configuration/">
+<span>Настройка безопасности устройства</span>
+</a>
+<a class="mega__link" href="/service/web3-services/passive-income-setup/">
+<span>Настройка пассивного дохода</span>
+</a>
+<a class="mega__link" href="/service/web3-services/solflare-crypto-card-registration/">
+<span>Регистрация криптокарты Solflare</span>
+</a>
+</div>
+<div class="mega__col">
+<h4 class="mega__heading">
+<a class="mega__heading-link" href="/service/skysend-system-services/">
+<span class="mega__heading-text">Услуги системы SkySend</span>
+<span class="mega__num">02</span>
+</a>
+</h4>
+<a class="mega__link" href="/service/skysend-system-services/custom-interfaces/">
+<span>Собственные интерфейсы</span>
+</a>
+<a class="mega__link" href="/service/skysend-system-services/payment-transaction-processing/">
+<span>Обработка платёжных транзакций</span>
+</a>
+<a class="mega__link" href="/service/skysend-system-services/service-provider-integration/">
+<span>Интеграция с поставщиками услуг</span>
+</a>
+<a class="mega__link" href="/service/skysend-system-services/system-financial-services/">
+<span>Финансовые услуги системы</span>
+</a>
+</div>
+<div class="mega__col">
+<h4 class="mega__heading">
+<a class="mega__heading-link" href="/service/software-development-and-support/">
+<span class="mega__heading-text">Разработка и поддержка ПО</span>
+<span class="mega__num">03</span>
+</a>
+</h4>
+<a class="mega__link" href="/service/software-development-and-support/cluster-and-transactional-systems/">
+<span>Кластерные и транзакционные системы</span>
+</a>
+<a class="mega__link" href="/service/software-development-and-support/embedded-software/">
+<span>Встраиваемое ПО</span>
+</a>
+<a class="mega__link" href="/service/software-development-and-support/peripheral-device-drivers/">
+<span>Драйверы периферийных устройств</span>
+</a>
+<a class="mega__link" href="/service/software-development-and-support/transaction-processing-services-api/">
+<span>Сервисы обработки транзакций (API)</span>
+</a>
+</div>
+<div class="mega__col">
+<h4 class="mega__heading">
+<a class="mega__heading-link" href="/service/analytics-and-consulting/">
+<span class="mega__heading-text">Аналитическая работа</span>
+<span class="mega__num">04</span>
+</a>
+</h4>
+<a class="mega__link" href="/service/analytics-and-consulting/instructions-and-procedures-development/">
+<span>Разработка инструкций и регламентов</span>
+</a>
+<a class="mega__link" href="/service/analytics-and-consulting/it-system-design-and-audit/">
+<span>Проектирование и аудит ИТ-систем</span>
+</a>
+<a class="mega__link" href="/service/analytics-and-consulting/technical-specification-development/">
+<span>Разработка технических заданий</span>
+</a>
+</div>
+<div class="mega__col">
+<h4 class="mega__heading">
+<a class="mega__heading-link" href="/service/solution-implementation/">
+<span class="mega__heading-text">Внедрение решений</span>
+<span class="mega__num">05</span>
+</a>
+</h4>
+<a class="mega__link" href="/service/solution-implementation/certification-authority-ca-setup/">
+<span>Развёртывание удостоверяющего центра (CA)</span>
+</a>
+<a class="mega__link" href="/service/solution-implementation/closed-key-exchange-system/">
+<span>Закрытая система обмена ключами</span>
+</a>
+<a class="mega__link" href="/service/solution-implementation/comprehensive-automation-of-multifunctional-public-service-centers-mfcs/">
+<span>Комплексная автоматизация МФЦ</span>
+</a>
+<a class="mega__link" href="/service/solution-implementation/cryptographically-protected-servers/">
+<span>Криптозащищённые серверы</span>
+</a>
+<a class="mega__link" href="/service/solution-implementation/intelligent-video-surveillance/">
+<span>Интеллектуальное видеонаблюдение</span>
+</a>
+<a class="mega__link" href="/service/solution-implementation/secure-ip-telephony/">
+<span>Защищённая IP-телефония</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="/company/">Компания</a>
+<div class="mega">
+<div class="mega__inner container">
+<div class="mega__intro">
+<h5 class="mega__title">Компания</h5>
+<p class="mega__text">Более 20 лет разрабатываем технологии для бизнеса и государства.</p>
+<a class="btn btn--outline btn--sm" href="/company/">
+<span class="btn__label">О компании</span>
+</a>
+</div>
+<div class="mega__cols mega__cols--2">
+<div class="mega__col">
+<a class="mega__link" href="/company/history/">
+<span>История</span>
+</a>
+<a class="mega__link" href="/company/contacts/">
+<span>Контакты</span>
+</a>
+<a class="mega__link" href="/company/licenses/">
+<span>Лицензии</span>
+</a>
+</div>
+<div class="mega__col">
+<a class="mega__link" href="/company/mission/">
+<span>Миссия</span>
+</a>
+<a class="mega__link" href="/company/partnership/">
+<span>Партнерство</span>
+</a>
+<a class="mega__link" href="/company/careers/">
+<span>Работа</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="nav__item">
+<a class="nav__link" href="/support/">Поддержка</a>
+<div class="mega">
+<div class="mega__inner container">
+<div class="mega__intro">
+<h5 class="mega__title">Поддержка</h5>
+<p class="mega__text">Материалы для клиентов и быстрая связь с командой.</p>
+<a class="btn btn--outline btn--sm" href="/support/">
+<span class="btn__label">Связаться</span>
+</a>
+</div>
+<div class="mega__cols mega__cols--2">
+<div class="mega__col">
+<a class="mega__link" href="/downloads/">
+<span>Загрузки</span>
+</a>
+</div>
+<div class="mega__col">
+<a class="mega__link" href="/support/callback/">
+<span>Обратная связь<small class="mega__desc">Наш менеджер ответит вам быстро</small>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+<div class="header__actions">
+<span class="header__lang">
+<b>RU</b> / EN</span>
+<button class="icon-btn icon-btn--theme" type="button" data-theme-toggle aria-label="Сменить тему">
+<svg class="icon-btn__icon icon-btn__icon--moon" aria-hidden="true">
+<use href="#icon-moon"/>
+</svg>
+<svg class="icon-btn__icon icon-btn__icon--sun" aria-hidden="true">
+<use href="#icon-sun"/>
+</svg>
+</button>
+<a class="icon-btn" href="https://t.me/infsysgroup" aria-label="Telegram">
+<svg class="icon-btn__icon" aria-hidden="true">
+<use href="#icon-telegram"/>
+</svg>
+</a>
+<a class="btn btn--primary btn--sm" href="/shop/">
+<span class="btn__label">Купить</span>
+</a>
+<button class="icon-btn icon-btn--burger" type="button" data-burger aria-label="Меню" aria-expanded="false">
+<svg class="icon-btn__icon" aria-hidden="true">
+<use href="#icon-burger"/>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<div class="scrim">
+</div>
+<div class="drawer" data-drawer>
+</div>
+<main id="primary" class="site-main shop-page">
+<section class="shop-hero"><div class="shop-hero__decor squares" data-squares="10" data-cell="48"></div><div class="wr shop-container"><nav class="woocommerce-breadcrumb" aria-label="Breadcrumb"><a href="/">Главная</a>&nbsp;/&nbsp;Магазин</nav><h1 class="shop-hero__title">Магазин</h1><div class="shop-hero__lead"><p>Платёжные системы, киосковое ПО, биометрические блоки и карты Solflare — решения группы, готовые к внедрению.</p></div></div></section>
+<section class="shop-catalog"><div class="wr shop-container"><ul class="category-grid"><li class="category-card reveal reveal--delay-0"><a class="category-card__link" href="#"><span class="category-card__media placeholder squares" data-squares="3" data-cell="28"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></span><span class="category-card__body"><span><span class="category-card__title">Платёжные системы</span><span class="category-card__count">3 товаров</span></span><span class="category-card__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span></a></li><li class="category-card reveal reveal--delay-1"><a class="category-card__link" href="#"><span class="category-card__media placeholder squares" data-squares="3" data-cell="28"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></span><span class="category-card__body"><span><span class="category-card__title">Киоски и ПО</span><span class="category-card__count">6 товаров</span></span><span class="category-card__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span></a></li><li class="category-card reveal reveal--delay-2"><a class="category-card__link" href="#"><span class="category-card__media placeholder squares" data-squares="3" data-cell="28"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></span><span class="category-card__body"><span><span class="category-card__title">Биометрия</span><span class="category-card__count">4 товаров</span></span><span class="category-card__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span></a></li><li class="category-card reveal reveal--delay-3"><a class="category-card__link" href="#"><span class="category-card__media placeholder squares" data-squares="3" data-cell="28"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></span><span class="category-card__body"><span><span class="category-card__title">Карты Solflare</span><span class="category-card__count">2 товаров</span></span><span class="category-card__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></span></a></li></ul><h2 class="shop-catalog__title">Все продукты</h2>
+<p class="woocommerce-result-count">Показано 1–8 из 24 товаров</p><form class="woocommerce-ordering" method="get"><select class="orderby" aria-label="Сортировка"><option>По популярности</option><option>Сначала новые</option><option>Цена: по возрастанию</option><option>Цена: по убыванию</option></select></form>
+<ul class="shop-grid"><li class="card card--product reveal reveal--delay-0"><a class="card__media placeholder squares" href="#" data-squares="3" data-cell="28" aria-label="Карта MasterCard от Solflare"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></a><div class="card__body"><span class="card__category">Карты Solflare</span><h3 class="card__title"><a href="#">Карта MasterCard от Solflare</a></h3><div class="card__footer"><span class="card__price"><ins>3 000 ₽</ins></span><a class="btn btn--primary btn--sm card__action" href="#"><span class="btn__label">В корзину</span></a></div></div></li><li class="card card--product reveal reveal--delay-1"><a class="card__media placeholder squares" href="#" data-squares="3" data-cell="28" aria-label="Универсальный блок ALLVEND"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></a><div class="card__body"><span class="card__category">Киоски и ПО</span><h3 class="card__title"><a href="#">Универсальный блок ALLVEND</a></h3><div class="card__footer"><span class="card__price card__price--request">Цена по запросу</span><a class="btn btn--primary btn--sm card__action" href="#"><span class="btn__label">Запросить</span></a></div></div></li><li class="card card--product reveal reveal--delay-2"><a class="card__media placeholder squares" href="#" data-squares="3" data-cell="28" aria-label="Биометрический блок FINGER"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></a><div class="card__body"><span class="card__category">Биометрия</span><h3 class="card__title"><a href="#">Биометрический блок FINGER</a></h3><div class="card__footer"><span class="card__price card__price--request">Цена по запросу</span><a class="btn btn--primary btn--sm card__action" href="#"><span class="btn__label">Запросить</span></a></div></div></li><li class="card card--product reveal reveal--delay-3"><a class="card__media placeholder squares" href="#" data-squares="3" data-cell="28" aria-label="Единый фискальный сервер"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></a><div class="card__body"><span class="card__category">Платёжные системы</span><h3 class="card__title"><a href="#">Единый фискальный сервер</a></h3><div class="card__footer"><span class="card__price card__price--request">Цена по запросу</span><a class="btn btn--primary btn--sm card__action" href="#"><span class="btn__label">Запросить</span></a></div></div></li><li class="card card--product reveal reveal--delay-0"><a class="card__media placeholder squares" href="#" data-squares="3" data-cell="28" aria-label="Кластерная система платежей SkySend"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></a><div class="card__body"><span class="card__category">Платёжные системы</span><h3 class="card__title"><a href="#">Кластерная система платежей SkySend</a></h3><div class="card__footer"><span class="card__price card__price--request">Цена по запросу</span><a class="btn btn--primary btn--sm card__action" href="#"><span class="btn__label">Запросить</span></a></div></div></li><li class="card card--product reveal reveal--delay-1"><a class="card__media placeholder squares" href="#" data-squares="3" data-cell="28" aria-label="Операционная система FastSYS"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span><span class="card__badge">Акция</span></a><div class="card__body"><span class="card__category">Киоски и ПО</span><h3 class="card__title"><a href="#">Операционная система FastSYS</a></h3><div class="card__footer"><span class="card__price"><del>30 000 ₽</del> <ins>25 000 ₽</ins></span><a class="btn btn--primary btn--sm card__action" href="#"><span class="btn__label">В корзину</span></a></div></div></li><li class="card card--product reveal reveal--delay-2"><a class="card__media placeholder squares" href="#" data-squares="3" data-cell="28" aria-label="Киоск самообслуживания Beauty"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span></a><div class="card__body"><span class="card__category">Киоски и ПО</span><h3 class="card__title"><a href="#">Киоск самообслуживания Beauty</a></h3><div class="card__footer"><span class="card__price"><ins>1 000,00 ₽</ins></span><a class="btn btn--primary btn--sm card__action" href="#"><span class="btn__label">В корзину</span></a></div></div></li><li class="card card--product reveal reveal--delay-3"><a class="card__media placeholder squares" href="#" data-squares="3" data-cell="28" aria-label="Test product"><span class="placeholder__body"><svg class="placeholder__icon" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="36" height="30" rx="4"/><circle cx="17" cy="20" r="3.5"/><path d="m6 34 11-10 8 7 6-5 11 9"/></svg><span class="placeholder__label">Нет изображения</span></span><span class="card__badge card__badge--muted">Нет в наличии</span></a><div class="card__body"><span class="card__category">Киоски и ПО</span><h3 class="card__title"><a href="#">Test product</a></h3><div class="card__footer"><span class="card__price"><ins>1 000,00 ₽</ins></span><a class="btn btn--primary btn--sm card__action" href="#"><span class="btn__label">Подробнее</span></a></div></div></li></ul>
+<nav class="woocommerce-pagination" aria-label="Pagination"><ul class="page-numbers"><li><span class="page-numbers current">1</span></li><li><a class="page-numbers" href="#">2</a></li><li><a class="page-numbers" href="#">3</a></li><li><a class="next page-numbers" href="#">→</a></li></ul></nav>
+</div></section></main><footer class="footer" id="contacts">
+<div class="container">
+<div class="footer__grid">
+<div class="footer__brand">
+<svg class="footer__logo" aria-hidden="true">
+<use href="#logo-full"/>
+</svg>
+<p class="footer__contact">Callback us:</p>
+<p class="footer__contact">
+<a class="footer__contact-link" href="https://t.me/infsysgroup">@infsysgroup</a>
+</p>
+<p class="footer__contact">
+<a class="footer__contact-link" href="mailto:info@isg.dev">info@isg.dev</a>
+</p>
+<div class="footer__social">
+<a class="social__link" href="#" aria-label="Telegram">
+<svg class="social__icon" aria-hidden="true">
+<use href="#icon-telegram"/>
+</svg>
+</a>
+<a class="social__link" href="#" aria-label="VK">
+<svg class="social__icon" aria-hidden="true">
+<use href="#icon-vk"/>
+</svg>
+</a>
+<a class="social__link" href="#" aria-label="YouTube">
+<svg class="social__icon" aria-hidden="true">
+<use href="#icon-youtube"/>
+</svg>
+</a>
+<a class="social__link" href="#" aria-label="LinkedIn">
+<svg class="social__icon" aria-hidden="true">
+<use href="#icon-linkedin"/>
+</svg>
+</a>
+<a class="social__link" href="#" aria-label="GitHub">
+<svg class="social__icon" aria-hidden="true">
+<use href="#icon-github"/>
+</svg>
+</a>
+<a class="social__link" href="#" aria-label="Почта">
+<svg class="social__icon" aria-hidden="true">
+<use href="#icon-mail"/>
+</svg>
+</a>
+</div>
+</div>
+<div class="footer__col">
+<h4 class="footer__title">Продукты</h4>
+<a class="footer__link" href="/solutions/developments/">Разработки</a>
+<a class="footer__link" href="/solutions/devices/">Устройства</a>
+<a class="footer__link" href="/solutions/innovations/">Инновации</a>
+<a class="footer__link" href="/solutions/technologies/">Технологии</a>
+</div>
+<div class="footer__col">
+<h4 class="footer__title">Услуги</h4>
+<a class="footer__link" href="/service/web3-services/">WEB3</a>
+<a class="footer__link" href="/service/skysend-system-services/">SkySend</a>
+<a class="footer__link" href="/service/software-development-and-support/">Разработка ПО</a>
+<a class="footer__link" href="/service/analytics-and-consulting/">Аналитика</a>
+<a class="footer__link" href="/service/solution-implementation/">Внедрение решений</a>
+</div>
+<div class="footer__col">
+<h4 class="footer__title">Компания</h4>
+<a class="footer__link" href="/company/mission/">Миссия</a>
+<a class="footer__link" href="/company/history/">История</a>
+<a class="footer__link" href="/company/licenses/">Лицензии</a>
+<a class="footer__link" href="/company/partnership/">Партнёрство</a>
+<a class="footer__link" href="/company/careers/">Работа</a>
+</div>
+<div class="footer__col">
+<h4 class="footer__title">Поддержка</h4>
+<a class="footer__link" href="/downloads/">Загрузки</a>
+<a class="footer__link" href="/support/callback/">Обратная связь</a>
+</div>
+</div>
+<div class="footer__bottom reveal">
+<span>© 2006–2026 Inform Systems Group. Все права защищены.</span>
+<span>Политика конфиденциальности · Карта сайта</span>
+</div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
